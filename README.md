@@ -83,3 +83,18 @@ API em office-evaluation.js: objectiveEvidence, getOfficeEvaluation, officeResul
 Resultados em **Desempenho no Office — entrega final** aparecem na revisão, no perfil e no PDF. Cada eixo só apresenta valor com duas oportunidades confirmadas e observadas; média das notas ÷ 2 × 100, pesos iguais. Sequenciamento e comunicação têm uma oportunidade e permanecem com dados insuficientes. Não há média conjunta com Discovery nem alteração do radar existente: os resultados ficam preparados para uma integração futura.
 
 Verificação adicional: node tests/office-review-browser.mjs exercita componentes, confirmação, ajustes, apoios, exclusões, recarga, exportação e separação da interface do participante em desktop e tablet.
+
+## Primeiro teste externo publicado
+
+Link para o participante: https://domingodecafe.github.io/App-de-Habilidades/?teste=1
+Área do avaliador: https://domingodecafe.github.io/App-de-Habilidades/
+
+O modo externo oferece identificação, concordância, 28 perguntas Discovery e o Office, ocultando os controles de classificação. Usa armazenamento local separado do avaliador e restaura o percurso após recarga. Ao concluir o Office, inicia o download de um PDF e oferece um botão para baixar novamente. O envio por WhatsApp é manual.
+
+O PDF contém identificação, radar com cinco eixos, respostas Discovery, primeiras/finais do Office, histórico de ações e revisão quando disponível. O radar distingue Discovery e Office; valores só aparecem após classificações válidas/confirmadas e cobertura mínima. Um preenchimento sem avaliador apresenta dados insuficientes. O arquivo também inclui um anexo JSON interno com a avaliação integral, preservando inclusive caracteres que não estejam disponíveis na fonte padrão do PDF.
+
+Para receber o resultado, baixe o PDF enviado pela pessoa e use **Mais ações > Importar avaliação** na área do avaliador. O aplicativo extrai o anexo e importa uma cópia; então revise as evidências do Office e classifique a entrevista. Depois, **Baixar PDF com radar** na revisão gera outro PDF com os resultados confirmados. O PDF não depende de impressão, banco de dados remoto ou envio automático.
+
+PDF-lib é distribuído localmente em vendor/ com sua licença MIT. GitHub Pages publica main na raiz; .nojekyll mantém os módulos e recursos estáticos. Arquivos de testes gerados e avaliações não são versionados.
+
+Teste adicional: node tests/external-browser.mjs. Para verificar o site publicado, configure TEST_BASE_URL com a URL acima (sem a query).
