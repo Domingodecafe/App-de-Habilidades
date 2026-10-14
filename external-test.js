@@ -31,6 +31,7 @@ export function externalTestView(a,qs,docs,status=''){
  return `<main class="external-test ${flow.phase==='discovery'?'external-wide':''}">${header}<section class="card">${body}</section><p id="save-status" class="status" role="status">${esc(status||'Salvamento neste dispositivo')}</p><p class="muted">LADO A · Aplicação acompanhada · ${esc(a.identity.code)}</p></main>`;
 }
 export function bindExternalTest(root,{getAssessment,getQuestions,getDocs,isActive,save,render,onPDF,notify}){
+ root.addEventListener('office-review-change',()=>{if(isActive())updateReadiness();});
  function updateReadiness(){const el=root.querySelector('[data-external-action="finish"]');if(!el)return;const state=accompaniedCompletion(getAssessment(),getQuestions(),getDocs());el.disabled=!state.ready;root.querySelector('#assisted-pending').textContent=state.ready?'Todas as decisões foram registradas.':`${state.missingDiscovery.length} decisões Discovery e ${state.missingOffice.length} oportunidades Office pendentes.`;}
  function field(e){
   if(!isActive())return;const a=getAssessment(),el=e.target;ensureAccompanied(a);

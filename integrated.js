@@ -1,5 +1,6 @@
 // Discovery 0.4, with protocol 0.3 retained for migration: original source content remains untouched and traceable.
 import {escapeHTML as esc} from './core.js';
+import {discoveryDecided} from './discovery-decision.js';
 export const DOMAINS=['Compreensão de instruções','Classificação e localização','Sequenciamento de tarefas','Priorização e atualização','Conferência e divergências','Comunicação funcional','Transferência de estratégias'];
 export const DISCOVERY_DOMAINS=[DOMAINS[0],DOMAINS[2],DOMAINS[3],DOMAINS[4],DOMAINS[5]];
 const discoveryDomain=old=>[0,2,3,4,5].indexOf(old);
@@ -63,7 +64,7 @@ export function validateIntegrated(value){
  return value;
 }
 export function integratedResults(a,qs){return DISCOVERY_DOMAINS.map((name,domain)=>{
- const items=qs.filter(q=>q.source==='Relato Discovery'&&skills[q.id]&&discoveryDomain(skills[q.id][0])===domain), valid=items.filter(q=>[0,1,2].includes(a.integrated?.records[q.id]?.score)&&a.integrated.records[q.id].answer.trim());
+ const items=qs.filter(q=>q.source==='Relato Discovery'&&skills[q.id]&&discoveryDomain(skills[q.id][0])===domain), valid=items.filter(q=>[0,1,2].includes(a.integrated?.records[q.id]?.score)&&a.integrated.records[q.id].answer.trim()&&(!a.assisted||discoveryDecided(a,q.id)));
  return {name,domain,total:items.length,count:valid.length,reported:valid.length,probed:0,interview:valid.length>=2?Math.round(valid.reduce((sum,q)=>sum+a.integrated.records[q.id].score,0)/valid.length*50*100)/100:null,practical:null,integrated:null};
 });}
 export function integratedRadar(rows,visible=[true,true,true]){

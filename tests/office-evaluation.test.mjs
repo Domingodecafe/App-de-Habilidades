@@ -69,7 +69,7 @@ test('apoio e acessibilidade não reduzem nota; ajuda recebida deve ser descrita
   field(a,'sequence','support','Repetição literal da instrução.');field(a,'sequence','access','Ampliação do texto e pausa.');confirmOfficeOpportunity(a,'sequence',docs);assert.equal(a.officeReview.records.sequence.score,2);assert.equal(officeResults(a,docs,DISCOVERY_DOMAINS)[1].value,null);assert.equal(officeResults(a,docs,DISCOVERY_DOMAINS)[1].count,1);
 });
 test('recusa, interrupção e barreira ficam sem nota e exigem motivo',()=>{
-  for(const condition of ['refused','interrupted','barrier']){const a=completed();field(a,'urgency','condition',condition);assert.throws(()=>confirmOfficeOpportunity(a,'urgency',docs),/motivo/);field(a,'urgency','reason','Condição observada documentada.');confirmOfficeOpportunity(a,'urgency',docs);assert.equal(officeResults(a,docs,DISCOVERY_DOMAINS)[2].count,0);validateOfficeReview(a.officeReview,a.office,docs);}
+  for(const condition of ['refused','interrupted','barrier']){const a=completed();field(a,'urgency','score',2);field(a,'urgency','condition',condition);assert.throws(()=>confirmOfficeOpportunity(a,'urgency',docs),/motivo/);field(a,'urgency','reason','Condição observada documentada.');confirmOfficeOpportunity(a,'urgency',docs);assert.equal(a.officeReview.records.urgency.score,null);assert.equal(officeResults(a,docs,DISCOVERY_DOMAINS)[2].count,0);validateOfficeReview(a.officeReview,a.office,docs);}
 });
 test('comunicação pode valer 2 sem decisão administrativa correta; não inventa nota a partir do texto',()=>{
   const a=completed();assert.equal(getOfficeEvaluation(a,docs).find(i=>i.op.id==='communication').suggestion,null);

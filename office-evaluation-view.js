@@ -25,6 +25,7 @@ export function bindOfficeReview(root,{getAssessment,getDocs,isOpen,save,render,
     try{setOfficeReviewField(getAssessment(),id,key,value);if(getAssessment().assisted)getAssessment().assisted.completedAt=null;save();const item=getOfficeEvaluation(getAssessment(),getDocs()).find(i=>i.op.id===id);root.querySelector(`#office-suggestion-${id}`).textContent=suggestionText(item);
       if(el.tagName==='SELECT'){render();root.querySelector(`[data-office-review-id="${id}"][data-office-review-key="${key}"]`)?.focus({preventScroll:true});}
       else{root.querySelector(`#review-${id} .badge`).textContent='Revisão pendente';}
+      root.dispatchEvent(new Event('office-review-change'));
     }catch(err){notify(err.message);}
   }
   root.addEventListener('input',e=>{if(e.target.tagName==='TEXTAREA')field(e);});root.addEventListener('change',e=>{if(e.target.tagName==='SELECT')field(e);});

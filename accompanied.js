@@ -1,6 +1,7 @@
 import {blankRecord} from './integrated.js';
 import {blankOfficeReview,getOfficeEvaluation,setOfficeReviewField} from './office-evaluation.js';
-const fingerprint=r=>JSON.stringify([r.answer,r.score,r.reason,r.help,r.access,r.independence,r.notes]);
+import {discoveryFingerprint as fingerprint,discoveryDecided} from './discovery-decision.js';
+export {discoveryDecided} from './discovery-decision.js';
 export function ensureAccompanied(a){
   a.assisted ||= {version:1,discoveryReviews:{},officeObservations:{},officePrepared:false,completedAt:null};
   a.external ||= {version:2,phase:'welcome',questionIndex:0};
@@ -8,7 +9,6 @@ export function ensureAccompanied(a){
   return a.assisted;
 }
 export function invalidateDiscoveryDecision(a,id){ensureAccompanied(a);delete a.assisted.discoveryReviews[id];a.assisted.completedAt=null;}
-export function discoveryDecided(a,id){const r=a.integrated.records[id],review=a.assisted?.discoveryReviews[id];return !!r&&!!review&&review.fingerprint===fingerprint(r)&&(['classified','notObserved'].includes(review.decision));}
 export function confirmDiscoveryDecision(a,q,decision,at=new Date().toISOString()){
   if(q.domain===null)throw Error('Esta pergunta é descritiva e não recebe nota.');
   const r=a.integrated.records[q.id] ||= blankRecord();
@@ -36,9 +36,15 @@ export function accompaniedCompletion(a,qs,docs){
   return {ready:!!a.identity.professional.trim()&&a.office?.status==='completed'&&missingDiscovery.length===0&&missingOffice.length===0,missingDiscovery,missingOffice};
 }
 export function validateAccompanied(a){
-  if(a.assisted===undefined)return;
   const s=a.assisted,object=v=>v&&typeof v==='object'&&!Array.isArray(v),date=v=>typeof v==='string'&&Number.isFinite(Date.parse(v));
   const fail=()=>{throw Error('Registro da aplicação acompanhada inválido.');};
+  if(a.external!==undefined){
+    const f=a.external;
+    if(!object(f)||![1,2].includes(f.version)||!['welcome','discovery','office-ready','office','review','done'].includes(f.phase)||!Number.isInteger(f.questionIndex)||f.questionIndex<0||f.questionIndex>27)fail();
+    if(['office','review','done'].includes(f.phase)&&!a.office)fail();
+    if(['review','done'].includes(f.phase)&&a.office.status!=='completed')fail();
+  }
+  if(s===undefined)return;
   if(!object(s)||s.version!==1||!object(s.discoveryReviews)||!object(s.officeObservations)||typeof s.officePrepared!=='boolean'||s.completedAt!==null&&!date(s.completedAt))fail();
   for(const [id,r] of Object.entries(s.discoveryReviews))if(!/^D\d\d$/.test(id)||!a.integrated.records[id]||!object(r)||!['classified','notObserved'].includes(r.decision)||typeof r.fingerprint!=='string'||!date(r.at))fail();
   for(const [step,o] of Object.entries(s.officeObservations))if(!/^[1-5]$/.test(step)||!object(o)||!['support','access','notes'].every(k=>typeof o[k]==='string')||!['unknown','independent','assisted'].includes(o.autonomy))fail();

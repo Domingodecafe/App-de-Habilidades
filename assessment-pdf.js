@@ -8,15 +8,17 @@ async function library(){
 // Standard PDF fonts support Portuguese; the attachment preserves all Unicode exactly.
 function printable(value,font){return [...String(value??'')].map(c=>{if(c==='\n'||c==='\r'||c==='\t')return c;try{font.encodeText(c);return c;}catch{return '?';}}).join('');}
 export async function createAssessmentPDF(assessment,content,docs){
+  // Freeze the export before loading the library; edits during loading must not mix versions.
+  assessment=structuredClone(assessment);
   const {PDFDocument,StandardFonts,rgb}=await library(),pdf=await PDFDocument.create(),font=await pdf.embedFont(StandardFonts.Helvetica),bold=await pdf.embedFont(StandardFonts.HelveticaBold);
   pdf.setTitle('LADO A - Respostas e evidências');pdf.setAuthor('LADO A Employability');pdf.setSubject('Discovery e Escritório Digital - teste externo');
   const green=rgb(0,.28,.26),ink=rgb(.12,.2,.18),gray=rgb(.4,.46,.43);let page,y;
   function addPage(){page=pdf.addPage([595.28,841.89]);y=755;page.drawRectangle({x:0,y:793,width:595.28,height:49,color:green});page.drawText('LADO A | Employability',{x:42,y:811,size:16,font:bold,color:rgb(1,1,1)});}
   function space(height){if(!page||y-height<48)addPage();}
   function line(text,{size=10,heading=false,color=ink}={}){
-    const f=heading?bold:font,clean=printable(text,f);let current='';
+    const f=heading?bold:font,clean=printable(text,f);let current='',width=0;
     for(const paragraph of clean.split(/\r?\n/)){
-      current='';for(const char of paragraph){if(f.widthOfTextAtSize(current+char,size)>510){space(size+6);page.drawText(current,{x:42,y,size,font:f,color});y-=size+6;current='';}current+=char;}
+      current='';width=0;for(const char of paragraph){const charWidth=f.widthOfTextAtSize(char,size);if(width+charWidth>510){space(size+6);page.drawText(current,{x:42,y,size,font:f,color});y-=size+6;current='';width=0;}current+=char;width+=charWidth;}
       space(size+6);if(current)page.drawText(current,{x:42,y,size,font:f,color});y-=size+6;
     }
   }

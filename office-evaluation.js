@@ -48,7 +48,7 @@ export function setOfficeReviewField(assessment,id,key,value){
   if(/^component[01]$/.test(key))record.components[Number(key.at(-1))]=value;
   else if(Object.hasOwn(record,key)&&key!=='confirmedAt'&&key!=='components')record[key]=value;
   else throw Error('Campo de revisão inválido.');
-  record.confirmedAt=null;return record;
+  record.confirmedAt=null;if(assessment.assisted)assessment.assisted.completedAt=null;return record;
 }
 function confirmationError(item){
   const {record:r,available,op,suggestion,text}=item;
@@ -66,6 +66,7 @@ export function confirmOfficeOpportunity(assessment,id,docs,at=new Date().toISOS
   if(assessment.office?.status!=='completed')throw Error('Conclua o Office antes de revisar.');
   const item=getOfficeEvaluation(assessment,docs).find(i=>i.op.id===id);if(!item)throw Error('Oportunidade desconhecida.');
   const error=confirmationError(item);if(error)throw Error(error);
+  if(item.record.condition!=='observed')item.record.score=null;
   assessment.officeReview.records[id].confirmedAt=at;
   return assessment.officeReview.records[id];
 }
