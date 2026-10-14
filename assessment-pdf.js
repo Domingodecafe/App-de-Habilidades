@@ -41,7 +41,7 @@ export async function createAssessmentPDF(assessment,content,docs){
   line('Este PDF contém as respostas e uma cópia integral dos dados em anexo. O envio pelo WhatsApp é manual.');
   line('Os dados ficam no dispositivo de quem respondeu; não são enviados automaticamente para um servidor.');
   line('Para o avaliador: importe este PDF em Mais ações > Importar avaliação para revisar as evidências.');
-  radar();
+  radar();addPage();
   title('Entrevista Discovery - respostas');
   for(const q of discoveryQuestions(content)){const record=assessment.integrated.records[q.id];title(`${q.id} - ${q.text}`);line(record?.answer||'Sem resposta registrada.');if(record?.score!==null&&record?.score!==undefined)line(`Classificação: ${record.score}/2`);}
   if(assessment.office){
