@@ -1,0 +1,85 @@
+# LADO A | Employability — Entrevista Discovery 0.4
+
+Aplicativo local para construção de um Perfil Profissional Individualizado. HTML, CSS e JavaScript, sem dependências externas em execução.
+
+## Executar
+
+Execute `node server.mjs` e abra http://127.0.0.1:4173. Mantenha a mesma origem e navegador para recuperar os dados locais.
+
+## Perfil baseado na entrevista Discovery
+
+- Navegação: Cadastro → Entrevista Discovery → Simulações profissionais → Perfil profissional.
+- 28 perguntas Discovery: 16 descritivas e 12 sobre habilidades relatadas. O perfil pode ser concluído, revisado e exportado sem prática.
+- Pré-cadastro opcional e editável com os mesmos campos do perfil.
+- Junções Discovery: D01/D07/D08/D33, D03/D04, D10/D17, D25/D26, D28/D29 e D31/D32. Perguntas originais disponíveis como complementos.
+- As sondagens RFT saíram do percurso e do radar; seus registros antigos permanecem no histórico.
+- Critérios explícitos: 0 nenhum componente demonstrado; 1 parte dos componentes; 2 todos. Ausência de evidência permanece sem nota.
+- Interesses, preferências e apoios descritivos não recebem nota. Ajuda, independência e acessibilidade são registrados separadamente.
+- Primeira evidência classificada preservada. Editar a resposta exige nova classificação.
+- Radar Discovery — evidências relatadas: cinco eixos (compreensão de instruções, sequenciamento, priorização e atualização, conferência e divergências, comunicação funcional). Média dos pontos / 2 × 100; mínimo operacional de duas classificações. Selecionar a habilidade abre seus relatos e critérios.
+- Somente a linha Discovery aparece no radar atual. O Escritório Digital é o primeiro minijogo funcional, com registros comportamentais separados das pontuações. Os outros quatro jogos permanecem em aberto; os arquivos históricos foram preservados e não alimentam este radar. A comparação futura deverá usar os mesmos cinco eixos.
+- Exportações JSON, PNG e PDF (impressão do navegador); demonstração inteiramente fictícia.
+
+## Compatibilidade e interpretação
+
+JSON esquema 4 aceita versões 1, 2 e 3. Registros anteriores são preservados. Nas versões 1/2, o campo `integrated` começa vazio, sem conversão de qualificadores antigos. Na versão 3, respostas, notas 0/1/2 e primeiras evidências Discovery são reutilizadas, pois os critérios permanecem iguais; registros RFT ficam históricos e são excluídos dos cálculos. A retomada é adaptada pelo identificador: uma pergunta Discovery é mantida, uma sondagem RFT retorna à primeira Discovery. A versão atual salva índice e identificador coerentes. A mudança de protocolo volta o relatório a rascunho para revisão, preservando o protocolo anterior em `previousProtocol`. Vínculos com práticas anteriores permitem consulta, sem efeito na pontuação.
+
+Os 66 itens originais permanecem em `data/content.json`; a seleção, junções, critérios e cálculos revisados estão em `integrated.js`; a interface e o relatório em `integrated-view.js`. Cálculos históricos continuam em `core.js` e não são alterados pelas classificações novas.
+
+A correspondência entre itens e cinco habilidades é uma proposta de conteúdo, ainda sem validação psicométrica ou equivalência demonstrada entre modalidades. Resultados não representam diagnóstico, classificação global de aptidão ou critério de exclusão profissional. A redução de conteúdo necessita avaliação empírica de compreensão, cobertura e concordância entre avaliadores.
+
+Use dados fictícios: a persistência local não possui autenticação ou infraestrutura clínica de produção. As respostas não são enviadas a serviços externos. Exporte JSON para backup.
+
+## Referências preservadas
+
+- [Manual de Aplicação](https://docs.google.com/document/d/1rXmdTnCLfrsmGwBzx_DjM1Q9BdQPLnzzvHcOlZEoabw/edit).
+- [Caderno de Materiais](https://docs.google.com/document/d/1IV4nPlEMGnyUEio_DA8K1IB8OeOKRbKUR0l4QB6sqVs/edit).
+
+Cópias de referência em `references/`, obtidas em 13/10/2026. Cenário fixo de escritório/estoque: **15/06/2027**. Data da avaliação e data do cenário são distintas.
+
+## Verificação
+
+`node --test tests/*.test.mjs` verifica conteúdo, cálculo, validação e compatibilidade histórica. Com o servidor ativo, `node tests/browser.mjs` testa navegação, retomada, classificação, histórico, computador/tablet e exportações JSON/PNG/PDF usando Chrome e Playwright. Configure `PLAYWRIGHT_MODULE` fora do runtime Codex. Saídas fictícias de teste ficam em `artifacts/`.
+
+
+## Interface e retomada
+
+A interface usa o logotipo oficial LADO A e a paleta verde #004743, índigo #1A237E, sálvia #7FA78D e lavanda #E8EAF6. O perfil tem abas Resumo, Evidências e Editar perfil, navegáveis também pelas setas do teclado. Os campos de texto crescem conforme a escrita.
+
+Trocar de etapa, pergunta ou aba abre o conteúdo no topo. Atualizar o navegador na mesma aba restaura avaliação, pergunta, seção do perfil, posição da rolagem e campo/cursor de edição. Essa posição fica no sessionStorage; as respostas continuam no salvamento local existente. Atualizações da mesma tela preservam sua posição.
+
+Verificação adicional: `node tests/navigation-browser.mjs` testa a navegação e a retomada em larguras de computador (1440 px) e tablet (768 px), com dados fictícios isolados.
+
+## LADO A Office | Central Administrativa
+
+Na seção **Simulações profissionais**, escolha **Iniciar / Retomar Escritório Digital**. Para testar sem alterar a avaliação atual, use **Testar com avaliação fictícia**, que cria uma avaliação separada.
+
+O Office tem cinco etapas: classificação, ordenação em lista única, urgências, mudança de regra e comunicação escrita. Cada etapa inicia um lote independente. Os cartões D01–D12 mantêm os dados originais de data/games.json, conferidos com references/materials.txt; o setor correto fica oculto na apresentação. O procedimento é identificado como adaptação digital e exige inferência na classificação.
+
+Use arrastar e soltar ou o seletor de destino; na ordenação, use arraste ou os botões subir/descer. Os destinos de arraste permanecem visíveis durante a rolagem. **Registrar primeira resposta** preserva a primeira entrega; revisões continuam possíveis até **Concluir etapa**. Entregas incompletas são aceitas após confirmação neutra. Nenhum acerto, erro ou nota é exibido.
+
+**Pausar**, sair da atividade ou recarregar preserva o registro e bloqueia a sessão até a retomada. **Solicitar ajuda** registra o pedido e orienta chamar o avaliador. A comunicação final mostra exclusivamente a distribuição feita pelo participante na etapa 4. Uma atividade concluída é consultável e não pode ser reiniciada na mesma avaliação.
+
+O campo opcional office, versões 1 e 2, fica separado de practical e dos cálculos RFT/Discovery. Ele contém assessmentId, adaptation, scenarioDate, demo, currentStage, status, stages e events. Cada etapa contém initial/current e as entregas first/final com horário; cada evento contém sequence, at, stage, document, action, origin/destination e before/after, com posições para movimentações. A disposição inicial é embaralhada uma vez e preservada. Edições textuais são registradas após 450 ms sem digitação, ou imediatamente antes de uma ação, exportação ou saída.
+
+API modular em office.js: createOffice(assessmentId, options), applyOffice(session, action, payload), getOfficeRecords(assessment), exportOfficeJSON(assessment), validateOffice(session, assessmentId). A consulta retorna uma cópia. A exportação própria contém o registro Office; a exportação completa do aplicativo inclui esse registro junto com a avaliação e permite reimportação. Na importação completa, a avaliação recebe novo ID e sourceAssessmentId preserva a origem do Office. Históricos inconsistentes são rejeitados por reexecução dos eventos contra os estímulos iniciais antes de inserir a cópia.
+
+Verificação: node --test tests/*.test.mjs e, com o servidor ativo, node tests/office-browser.mjs. O teste de navegador aceita PLAYWRIGHT_MODULE e usa o Playwright já instalado no ambiente; isso não adiciona dependência ao aplicativo. Capturas de desktop/tablet ficam em artifacts/office-*.png.
+
+## Matriz do Office — office-matrix-1
+
+Novas atividades usam o protocolo Office 2. Antes da ordenação e da mudança de regra, o participante explica a instrução; depois da ordenação e da marcação de urgências, explica a conferência com exemplo concreto. A explicação inicial precede a liberação dos controles da tarefa e pode ser entregue em branco após confirmação neutra. As quatro perguntas aceitam escrita, fala ou comunicação alternativa registrada pelo avaliador. Respostas são salvas nos snapshots inicial, primeira entrega e entrega final e nos eventos answer/release-instruction. As atividades Office 1 continuam no protocolo original, sem perguntas adicionadas retroativamente.
+
+Após a conclusão, abra **Revisar evidências do Office** na seção Simulações profissionais. Para tarefas objetivas, o sistema sugere notas conforme as faixas: abaixo de 50% = 0, de 50% a menos de 100% = 1, 100% = 2. A ordenação aceita empates de data; urgência inclui 17/06/2027; nenhuma marcação recebe 0 mesmo quando os seis não urgentes ficaram desmarcados. A etapa 4 exige D04/D11 em VERIFICAR e os outros dez cartões nos setores originais, combinando atualização da regra e classificação por setor. A etapa 1 é complementar.
+
+Respostas abertas têm dois componentes, classificados pelo avaliador como demonstrado ou não demonstrado. O sistema soma os componentes para sugerir 0/1/2; ele não interpreta texto automaticamente. Uma resposta em branco sugere 0 por omissão. Comunicação avalia relato fiel das ações e motivo compreensível, independentemente do acerto administrativo. Conferência exige critério e comparação concreta; não exige encontrar erro quando o resultado estiver correto.
+
+Escolher a condição de observação e a nota não basta: **Confirmar revisão desta oportunidade** é obrigatório. Ajustar a nota exige motivo; recusa, interrupção ou barreira impeditiva exigem motivo e não entram na média. Apoio recebido, acessibilidade e autonomia são campos separados. Autonomia com ajuda exige descrição do apoio, sem reduzir automaticamente a nota. Alterar qualquer campo invalida a confirmação anterior.
+
+A revisão está no campo opcional officeReview da avaliação, com matrixVersion, protocolVersion, evidenceKey e records. O identificador evidenceKey vincula a revisão às entregas finais preservadas. Os registros contêm condição, componentes, nota, motivo, apoio, acesso, autonomia, transcrição, modalidade e confirmedAt. A exportação completa do aplicativo ou o botão **Exportar avaliação com revisão (JSON)** preserva os dois campos; a exportação do ambiente participante continua contendo apenas os registros comportamentais do Office.
+
+API em office-evaluation.js: objectiveEvidence, getOfficeEvaluation, officeResults, setOfficeReviewField, useOfficeSuggestion, confirmOfficeOpportunity e validateOfficeReview. validateImport aceita officeDocs como segundo argumento para conferir também a consistência das confirmações na importação.
+
+Resultados em **Desempenho no Office — entrega final** aparecem na revisão, no perfil e no PDF. Cada eixo só apresenta valor com duas oportunidades confirmadas e observadas; média das notas ÷ 2 × 100, pesos iguais. Sequenciamento e comunicação têm uma oportunidade e permanecem com dados insuficientes. Não há média conjunta com Discovery nem alteração do radar existente: os resultados ficam preparados para uma integração futura.
+
+Verificação adicional: node tests/office-review-browser.mjs exercita componentes, confirmação, ajustes, apoios, exclusões, recarga, exportação e separação da interface do participante em desktop e tablet.

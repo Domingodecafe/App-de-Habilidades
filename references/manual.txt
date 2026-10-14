@@ -1,0 +1,310 @@
+﻿LADO A — MANUAL DE APLICAÇÃO
+Avaliação de habilidades e repertórios profissionais • Versão piloto 1.0 • 13/10/2026
+USO INTERNO: instrumento autoral de observação e planejamento de apoio, não teste psicológico padronizado. O documento teórico separado é “PROGRAMA LADO A DE EMPREGABILIDADE | Documento Geral”.
+1. Instruções rápidas para o aplicador
+1.1 Objetivo e público
+Produzir um Perfil Profissional Individualizado com interesses, repertórios já observáveis, necessidades de ensino, apoios e características de ambientes de trabalho que favoreçam o desempenho. Destinado a adolescentes e adultos autistas que desejem explorar atividades profissionais, com adaptação de comunicação e complexidade de tarefa conforme o repertório. Não usar como critério isolado de contratação, elegibilidade ou exclusão.
+1.2 Organização sugerida
+• Encontro 1 — Entrevista Discovery e preferências: 60–75 minutos.
+• Encontro 2 — Sondagens de dez eixos relacionais: 60–75 minutos, com intervalos.
+• Encontro 3 — Simulações práticas A, B e C: 75–90 minutos, com possibilidade de dividir em mais encontros.
+• Encontro 4 — Devolutiva e plano colaborativo: 30–45 minutos. Observação em ambiente real, quando possível e consentida, é etapa complementar, não pré-requisito.
+Os tempos são propostas operacionais; adequar o ritmo. Não apressar respostas nem interpretar necessidade de pausa como falha. Se a sessão for longa, dividir em sessões menores e registrar o que não foi observado.
+1.3 Preparação do ambiente e materiais
+• Espaço com mesa, duas cadeiras, iluminação e estímulos sonoros ajustáveis; água, possibilidade de pausa e acesso a recursos de comunicação preferidos.
+• Manual para o avaliador; ficha do participante; formulários de registros; lápis/caneta; cronômetro opcional; folhas A4; três pastas ou caixas identificadas RH, FINANCEIRO e OPERAÇÕES.
+• Imprimir e recortar 12 cartões de documentos (Anexo D), 10 cartões de estoque (Anexo E), uma folha de pedido, avisos “URGENTE”, “VERIFICAR”, “CONCLUÍDO” e cartões de situações de comunicação (Anexo F).
+• Preparar etiquetas coloridas, ao menos dez fichas em branco, envelopes ou caixas pequenas para representar armazenamento. Caso não seja possível imprimir, usar cartões manuscritos idênticos em legibilidade.
+1.4 Abertura padronizada — ler ou adaptar de forma acessível
+“Vamos conhecer os tipos de atividade que você gostaria de realizar e experimentar algumas situações parecidas com as do trabalho. Não é uma prova de contratação e não existe um resultado único de aprovado ou reprovado. Você pode pensar antes de responder, pedir que eu repita, solicitar esclarecimentos ou uma pausa. Algumas tarefas serão feitas primeiro sem ajuda para eu entender como estão hoje; depois poderemos experimentar recursos que facilitem a atividade. Se alguma situação for desconfortável, me diga e ajustamos.”
+Solicitar concordância para participar e esclarecer de que modo serão registrados e utilizados os dados. Solicitar autorização específica, separada, para gravação de áudio/vídeo, participação de informantes ou compartilhamento com empresa. Não presumir concordância de terceiros.
+1.5 Regra de apresentação dos itens e registro
+ETAPA DE SONDAGEM: ler a instrução exatamente como indicada uma vez; permitir leitura do cartão e tempo razoável; se solicitado, repetir sem explicar a resposta. Registrar: resposta literal ou ação, acerto conforme o gabarito operacional, tempo aproximado se pertinente, necessidade espontânea de esclarecimento, auxílio fornecido e contexto. Evitar corrigir ou elogiar acerto/erro antes de terminar a sonda da mesma relação. Feedback neutro: “Obrigado, vamos para a próxima.”
+
+
+ETAPA DE APOIO: concluída a sonda independente, oferecer a condição facilitadora escolhida (ex.: instrução escrita, demonstração, checklist, exemplo, ajuda verbal). Reapresentar tarefa equivalente, não idêntica quando possível. Registrar o apoio e o efeito sobre o desempenho. Separar claramente dados de linha de base, execução com apoio e generalização.
+
+
+Categorias de resposta por item: I = independente conforme critério; AP = conforme critério com apoio registrado; N = não ocorreu conforme o critério na oportunidade; NO = não observado/recusado/interrompido.
+
+
+Para grau de apoio pode-se usar 0 = não realizou, 1 = ajuda direta/modelação, 2 = pista pontual, 3 = independente; nunca somar para criar aptidão global. Registrar também as escolhas, os recursos funcionais e as barreiras.
+
+
+Tipos de apoio: R = repetição literal; E = apoio escrito/visual; V = pista verbal que orienta; M = demonstração/modelação; F = ajuda física consentida (não prevista rotineiramente); PA = pausa/adaptação sensorial. Repetição por necessidade de acesso deve ser descrita, não automaticamente classificada como déficit.
+2. Encontro 1 — Entrevista estruturada Discovery
+2.1 Identificação e escolhas
+Participante: _________________________  Idade: ______  Data: ____/____/______
+Profissional: _________________________  Modalidade de comunicação preferida: _________________________
+Pessoa de apoio presente (se escolhida): _________________________  Permissão para compartilhar resultados com: _________________________
+Objetivo declarado pelo participante (registrar nas próprias palavras): _______________________________________________________________
+2.2 Entrevista — instruções
+Iniciar pelas perguntas abertas; utilizar exemplos ou alternativas apenas quando necessário, registrando quais foram oferecidos. Investigar atividades escolares, domésticas, projetos pessoais e voluntariado como experiências válidas. Não presumir que ausência de emprego formal significa ausência de repertórios profissionais. Anotar exemplos concretos e frequências em vez de converter respostas em traços de personalidade. Evitar direcionar respostas para vagas desejadas pela equipe.
+Bloco A — Interesses, trajetórias e objetivos
+01. Quando pensa em trabalhar, que tipo de atividade ou função chama sua atenção?
+02. O que você gostaria que um trabalho lhe proporcionasse (ex.: renda, autonomia, contato social, interesse, rotina)?
+03. Que atividades você gosta de fazer e consegue explicar como realiza?
+04. Conte uma atividade, mesmo fora de um emprego formal, pela qual já foi responsável. O que fazia do começo ao fim?
+05. Já frequentou curso, estágio, trabalho, voluntariado ou projeto? O que lhe agradou e o que foi difícil em cada situação?
+06. Quais tarefas prefere evitar? O que nelas torna a experiência desagradável ou difícil?
+07. Você prefere trabalhar com informações, objetos, pessoas, computadores, atividades externas ou uma combinação? Pode dar exemplos?
+08. Se pudesse experimentar dois tipos de posto de trabalho, quais escolheria primeiro? Por quê?
+Bloco B — Aprendizagem, instruções e tarefas
+09. Como percebe que entendeu uma instrução e já pode começar?
+10. Se alguém explicar uma tarefa muito rapidamente, o que você costuma fazer?
+11. O que funciona melhor para aprender algo novo: ouvir, ler, ver alguém fazendo, experimentar ou combinar essas formas?
+12. Conte como você organiza uma tarefa com vários passos. Usa listas, aplicativos ou outra estratégia?
+13. O que faz quando recebe duas atividades com prazos diferentes?
+14. Lembre de uma ocasião em que precisou corrigir um erro. Como identificou o problema e o que fez?
+15. Quando a tarefa muda no meio do caminho, o que ajuda você a reorganizá-la?
+16. Você costuma revisar o próprio trabalho? O que confere antes de considerar uma tarefa finalizada?
+Bloco C — Comunicação, relações e resolução de problemas
+17. Se uma orientação estiver incompleta, como pode pedir os dados que faltam?
+18. O que costuma fazer quando discorda de uma orientação?
+19. Como gostaria de receber feedback sobre algo que pode melhorar?
+20. Conte uma experiência de fazer uma tarefa junto com outra pessoa. Como dividiram o trabalho?
+21. Quando outra pessoa depende de uma informação sua, como costuma informá-la?
+22. O que ajudaria você a pedir ajuda em um ambiente novo?
+23. Prefere realizar atividades com mais interação, com pouca interação ou varia conforme a atividade?
+24. Há situações de conversa ou reunião que exigem um esforço muito grande? Que mudanças ajudariam?
+Bloco D — Ambiente, ritmo, autorregulação e apoios
+25. Que características de um local ajudam na concentração (ruído, luz, movimento, temperatura, previsibilidade)?
+26. Que condições do ambiente costumam atrapalhar seu trabalho ou estudo?
+27. Quais sinais fazem você perceber que precisa de uma pausa? Como costuma comunicar isso?
+28. Em que horários e períodos do dia você percebe melhor rendimento?
+29. Que formatos de jornada ou de intervalos seriam mais adequados para você, dentro de suas necessidades e preferências?
+30. Você se sente mais confortável com tarefas repetitivas, variadas ou uma combinação?
+31. Quais recursos lhe ajudam a ter autonomia (checklist, agenda, instrução escrita, fone, supervisão, dupla)?
+32. Há alguma adaptação que você já utilizou e gostaria de manter em um trabalho?
+Bloco E — Compromisso e decisão compartilhada
+33. Em uma escala de preferência descrita por você, quais três tarefas mais gostaria de experimentar?
+34. Quais três condições de trabalho são importantes para você e não deveriam ser ignoradas?
+35. Quais tarefas você toparia treinar, mesmo ainda não sabendo fazê-las sozinho?
+36. Há algo importante sobre suas habilidades ou necessidades que eu não perguntei?
+2.3 Registro-síntese da entrevista (preencher)
+Interesses mais valorizados: __________________________________________________________________
+Exemplos concretos de habilidades relatadas e contexto: ___________________________________________
+Demandas que deseja desenvolver: ____________________________________________________________
+Ambientes/horários preferidos e condições a evitar: ________________________________________________
+Apoios preferidos pelo próprio participante: _____________________________________________________
+Divergências entre autorrelato e observação a investigar sem presumir erro do participante: ________________
+Oportunidades profissionais a explorar (hipóteses, não conclusões): ___________________________________
+3. Preparação para os encontros seguintes
+Selecionar exemplos adequados ao interesse do participante sem alterar o tipo de relação que se pretende observar. Para cada sonda, registrar se o participante já conhecia os nomes ou tarefas e, em caso positivo, usar um conjunto equivalente novo. Deixar disponíveis recursos de comunicação, mas distinguir o que foi oferecido como acessibilidade de pistas que revelam a resposta. Preferir observar múltiplos exemplos antes de inferir um repertório generalizado.
+
+
+4. Encontro 2 — Sondagens relacionais orientadas ao trabalho
+Objetivo: observar repertórios relacionais com demandas próximas ao trabalho, sem confundir desempenho verbal em sonda com desempenho efetivo num posto. O aplicador lê o ESTÍMULO, registra a RESPOSTA sem antecipar o gabarito e, depois, consulta o CRITÉRIO. Os exemplos apresentam relações especificadas no enunciado. Para explorar derivação, não ensinar diretamente a relação solicitada antes da sonda e usar estímulos novos. Item desconhecido, fadiga ou baixa familiaridade com o tema exige nova oportunidade, não conclusão deficitária.
+
+
+Aplicação: aproximadamente três oportunidades por eixo (30 no total); alternar tarefas verbal-escritas e respostas por fala, escrita, apontar ou movimentar cartões; registrar modalidade escolhida.
+ Se não houver resposta, oferecer acesso comunicacional, registrar e repetir em outro momento. Uma única resposta não determina aquisição de moldura; apenas identifica o que foi observado naquele contexto.
+Eixo R1 — Coordenação (mesma função ou significado)
+Materiais: cartões com nomes fictícios “LUMA”, “KIT-4”, “CONFERIR” e “REVISAR”; folha de respostas. Competência funcional: interpretar nomes alternativos de operações e objetos.
+
+
+R1.1 ESTÍMULO: “Neste setor, a etiqueta LUMA indica o mesmo material que KIT-4. KIT-4 é o conjunto de envelopes. Se eu pedir LUMA, o que devo receber?”
+
+
+CRITÉRIO: conjunto de envelopes (ou indicação do cartão correspondente).
+RELAÇÃO ALVO: coordenação transitiva entre três estímulos.
+
+
+R1.2 ESTÍMULO: “Aqui, conferir um pedido significa revisar seus itens. No aviso aparece REVISAR. Esse aviso pede uma tarefa diferente de CONFERIR?”
+
+
+CRITÉRIO: não, no contexto descrito é a mesma tarefa. 
+ALVO: equivalência funcional contextual, não qualquer sinônimo em todos os empregos.
+
+
+R1.3 ESTÍMULO: “A peça chamada TERA também é chamada P-8. Se alguém pedir P-8, que outro nome você poderia usar para indicar a mesma peça?” 
+CRITÉRIO: TERA. 
+ALVO: mutualidade da relação ensinada.
+
+
+Ajuda pós-sonda: deixar cartões visíveis e pedir que una os termos equivalentes; depois repetir com novos nomes. Registrar se o apoio visual facilitou a resposta.
+Eixo R2 — Distinção (diferença relevante)
+Materiais: três cartões com códigos A11, A12 e A12, mesma cor; um com status PENDENTE e outro CONCLUÍDO. 
+Competência: distinguir identificadores e estados que afetam a tarefa.
+
+
+R2.1 ESTÍMULO: “A etiqueta A11 tem código diferente de A12. A12 é o mesmo código que o cartão marcado A12. O cartão A11 tem o mesmo código que esse último?”
+
+
+ CRITÉRIO: não.
+ ALVO: manutenção de distinção apesar de outra relação de coordenação.
+
+
+R2.2 ESTÍMULO: mostrar dois cartões azuis, A11 e A12. “A cor é igual. Posso considerar que os códigos de pedido são iguais?” 
+
+
+CRITÉRIO: não; cor não substitui código. 
+ALVO: diferença sob critério de identificação.
+
+
+R2.3 ESTÍMULO: “Um formulário está PENDENTE e outro CONCLUÍDO. Eles podem seguir a mesma etapa de arquivamento, se a regra disser para arquivar só os concluídos?” 
+
+
+CRITÉRIO: não; apenas o concluído satisfaz a regra. 
+ALVO: distinção contextual aplicada.
+
+
+Ajuda pós-sonda: destacar visualmente o campo relevante (código ou status) em dois exemplos novos; retirar marcação e reapresentar.
+Eixo R3 — Oposição (padrão contrário na dimensão definida)
+Materiais: cartões LIGADO, DESLIGADO, ATIVO, INATIVO. Competência: acompanhar instruções contrárias sem presumir que toda mudança é binária.
+R3.1 ESTÍMULO: “Nesta máquina há apenas dois estados: LIGADO e DESLIGADO, que são opostos. Se não estiver LIGADA, qual é o outro estado possível?” CRITÉRIO: desligada. ALVO: oposição em dimensão explicitamente binária.
+R3.2 ESTÍMULO: “SOL indica ATIVO; LUA indica INATIVO. ATIVO é o oposto de INATIVO. SOL e LUA indicam o mesmo estado ou estados opostos?” CRITÉRIO: opostos. ALVO: combinar coordenação e oposição.
+R3.3 ESTÍMULO: “Se o comando anterior era INCLUIR na lista e o novo comando é EXCLUIR da lista, que mudança ocorreu?” CRITÉRIO: orientação oposta, retirar em vez de adicionar. ALVO: mudança de função sob nova regra.
+Ajuda pós-sonda: usar cartões de estados opostos e solicitar arranjos com três outros pares novos. Não pedir para o participante demonstrar funcionamento de máquinas reais.
+Eixo R4 — Comparação (mais, menos, prioridade)
+Materiais: cartões X, Y, Z; ficha com prioridades. Competência: comparar demandas por critérios explícitos, não valores arbitrariamente impostos.
+R4.1 ESTÍMULO: “A tarefa X demora mais que Y. Y demora mais que Z. Entre X e Z, qual demora mais?” CRITÉRIO: X. ALVO: comparação derivada transitiva.
+R4.2 ESTÍMULO: “O serviço A termina antes do serviço B, e o B antes do C. Qual termina por último?” CRITÉRIO: C. ALVO: combinação de ordem e comparação temporal.
+R4.3 ESTÍMULO: “O pedido P é mais urgente que Q. Q é mais urgente que R. R é mais urgente ou menos urgente que P?” CRITÉRIO: menos urgente. ALVO: relação inversa derivada.
+Ajuda pós-sonda: representar relação com cartões e uma seta “mais → menos”, e repetir com letras novas sem números. Evitar interpretar como limitação de matemática.
+Eixo R5 — Hierarquia (classes e inclusão)
+Materiais: cartões MATERIAL, PAPELARIA, ETIQUETAS, DOCUMENTOS, REGISTROS DE ESTOQUE. Competência: organizar conjuntos de trabalho por relações de inclusão.
+R5.1 ESTÍMULO: “Todas as etiquetas deste exemplo são materiais de papelaria. Todos os materiais de papelaria pertencem ao grupo de suprimentos. As etiquetas pertencem ao grupo de suprimentos?” CRITÉRIO: sim. ALVO: inclusão derivada.
+R5.2 ESTÍMULO: “Todo registro de estoque é um documento. Isso significa que todo documento é registro de estoque?” CRITÉRIO: não. ALVO: assimetria da inclusão hierárquica.
+R5.3 ESTÍMULO: “O setor de cadastro pertence ao departamento administrativo. O administrativo pertence à empresa. O cadastro faz parte da empresa?” CRITÉRIO: sim. ALVO: hierarquia de partes e conjuntos.
+Ajuda pós-sonda: organizar cartões em três envelopes encaixados ou círculos; registrar se reconhece relações entre classe e subclasse.
+Eixo R6 — Temporalidade (antes/depois e atualização de ordem)
+Materiais: três cartões A, B, C e marcador “PRIMEIRO”. Competência: compreender sequência e revisá-la sob novas instruções.
+R6.1 ESTÍMULO: “A conferência acontece antes do registro. O registro acontece antes da embalagem. A embalagem ocorre antes ou depois da conferência?” CRITÉRIO: depois. ALVO: encadeamento temporal derivado.
+R6.2 ESTÍMULO: “A tarefa B será feita depois de A, mas antes de C. Em que ordem ficam A, B e C?” CRITÉRIO: A → B → C. ALVO: ordenar relações explicitadas.
+R6.3 ESTÍMULO: “Ontem foi realizado o pedido; hoje será feita a conferência; amanhã a entrega. Se estamos no dia da conferência, a entrega já aconteceu?” CRITÉRIO: não. ALVO: orientação temporal contextual.
+Ajuda pós-sonda: dispor cartões numa linha do tempo e solicitar depois rearranjo com nova sequência; registrar independente e apoiado separadamente.
+Eixo R7 — Espacialidade (localização relativa)
+Materiais: três caixas A, B, C desenhadas; cartões ESQUERDA, DIREITA, DENTRO, ABAIXO. Competência: localizar objetos e compreender perspectivas espaciais.
+R7.1 ESTÍMULO: “A caixa A está à esquerda da B. A B está à esquerda da C. A caixa A está à direita ou à esquerda da C?” CRITÉRIO: à esquerda. ALVO: composição de relações espaciais numa linha.
+R7.2 ESTÍMULO: “A pasta está dentro da gaveta. A gaveta fica debaixo da mesa. Onde está a pasta em relação à mesa?” CRITÉRIO: na gaveta, debaixo da mesa; aceitar descrição equivalente. ALVO: combinação de inclusão espacial e posição.
+R7.3 ESTÍMULO: colocar um cartão à direita de outro. “Se X fica à direita de Y, onde Y fica em relação a X?” CRITÉRIO: à esquerda. ALVO: relação espacial inversa.
+Ajuda pós-sonda: mover objetos concretos de modo visível; verificar se a compreensão melhora com o suporte não verbal. Cuidado com referências esquerda/direita do avaliador versus do participante.
+Eixo R8 — Dêixis (eu/você, aqui/lá, agora/então)
+Materiais: cartões de personagens ANA e BRUNO e locais MESA 1 e MESA 2. Competência: diferenciar informações segundo quem fala, quando e de onde, sem exigir contato ocular.
+R8.1 ESTÍMULO: “Ana está na Mesa 1 e Bruno está na Mesa 2. Se Bruno disser ‘eu estou aqui’, quem é ‘eu’ e onde é ‘aqui’?” CRITÉRIO: Bruno e Mesa 2. ALVO: eu/aqui variando por emissor.
+R8.2 ESTÍMULO: “Agora imagine que você é Ana, na Mesa 1, e eu sou Bruno, na Mesa 2. Quando eu digo ‘você está aí’, a quem me refiro?” CRITÉRIO: Ana (papel assumido pelo participante). ALVO: troca de perspectiva; aceitar apoio escrito se necessário.
+R8.3 ESTÍMULO: “Ontem, Ana ainda não havia recebido o arquivo; hoje ele está com ela. Se Ana falar ‘agora eu tenho o arquivo’, isso descreve ontem ou hoje?” CRITÉRIO: hoje. ALVO: perspectiva temporal contextual.
+Ajuda pós-sonda: usar cartões de personagem e setas indicando emissor/receptor; fazer troca explícita de papéis. Não pontuar fala pouco expressiva ou ausência de contato visual como falha dêitica.
+Eixo R9 — Contingência e relações condicionais (se/então)
+Materiais: cartões ETIQUETA VERMELHA, REVISAR, AVISAR, EMBALAR. Competência: seguir regras condicionais e reconhecer limites da informação.
+R9.1 ESTÍMULO: “Se o cartão for vermelho, o pedido precisa ser revisado. Se precisar ser revisado, o supervisor deve ser avisado. O cartão está vermelho. O que deve acontecer?” CRITÉRIO: revisar e avisar. ALVO: cadeia condicional de regras.
+R9.2 ESTÍMULO: “A única regra informada é: se o cartão for vermelho, não embalar. Agora o cartão é azul. Só com essa regra você sabe que pode embalar?” CRITÉRIO: não; faltam informações. ALVO: evitar concluir a inversa de uma regra unilateral.
+R9.3 ESTÍMULO: “Se houver divergência de quantidade, interrompa o pedido e solicite conferência. Você encontrou uma divergência. O que fará?” CRITÉRIO: interromper/separar e solicitar conferência. ALVO: aplicação contextual de regra.
+Ajuda pós-sonda: escrever as condições como fluxograma “SE → ENTÃO” e testar com cor ou condição nova. Observar pedido de esclarecimento diante de regra insuficiente como repertório relevante.
+Eixo R10 — Analogia e relação entre relações
+Materiais: cartões “DOCUMENTO → PASTA”, “MATERIAL → CAIXA”, “CLASSIFICAR → LOCALIZAR”. Competência: transferir princípio funcional a situações novas, não apenas repetir uma resposta aprendida.
+R10.1 ESTÍMULO: “No escritório, documentos são separados por assunto para serem encontrados mais facilmente. No estoque, os materiais precisam ser encontrados mais facilmente. Que ideia do escritório você poderia usar no estoque?” CRITÉRIO: separar materiais por categoria/tipo ou outro critério declarado que facilite localizar. ALVO: correspondência de função entre dois contextos.
+R10.2 ESTÍMULO: “Documento está para pasta assim como peça pequena está para o quê, se o objetivo é guardar e localizar?” CRITÉRIO: recipiente/caixa/organizador apropriado, com justificativa de mesma relação funcional. ALVO: analogia de armazenamento.
+R10.3 ESTÍMULO: “Você aprendeu a conferir nomes e datas em uma lista de documentos. Agora precisa conferir códigos e quantidades de produtos. O que no procedimento anterior pode ser aproveitado?” CRITÉRIO: comparar cada item da lista com o item real e confirmar campos previstos, adaptando quais campos conferir. ALVO: transferência de regra de conferência.
+Ajuda pós-sonda: demonstrar o princípio com um par de tarefas de treino diferente; apresentar terceiro exemplo novo sem pista e registrar transferência. Analogia não é considerada moldura simples e independente apenas pela resposta verbal.
+4.1 Folha de registro das 30 sondagens
+Preencher um registro por oportunidade: data | código R1.1 a R10.3 | resposta literal/ação | I/AP/N/NO | tipo de apoio e descrição | observação contextual | nova sonda necessária?
+R1: 1.1 _____  1.2 _____  1.3 _____   | evidência, ajuda, novos exemplos: ______________________________
+R2: 2.1 _____  2.2 _____  2.3 _____   | evidência, ajuda, novos exemplos: ______________________________
+R3: 3.1 _____  3.2 _____  3.3 _____   | evidência, ajuda, novos exemplos: ______________________________
+R4: 4.1 _____  4.2 _____  4.3 _____   | evidência, ajuda, novos exemplos: ______________________________
+R5: 5.1 _____  5.2 _____  5.3 _____   | evidência, ajuda, novos exemplos: ______________________________
+R6: 6.1 _____  6.2 _____  6.3 _____   | evidência, ajuda, novos exemplos: ______________________________
+R7: 7.1 _____  7.2 _____  7.3 _____   | evidência, ajuda, novos exemplos: ______________________________
+R8: 8.1 _____  8.2 _____  8.3 _____   | evidência, ajuda, novos exemplos: ______________________________
+R9: 9.1 _____  9.2 _____  9.3 _____   | evidência, ajuda, novos exemplos: ______________________________
+R10: 10.1 ____ 10.2 ____ 10.3 ____ | evidência, ajuda, novos exemplos: ______________________________
+Observações interpretativas: diferenciar a compreensão da instrução, a memória imediata, o modo de resposta, o histórico de treino e os efeitos das adaptações. O padrão de respostas pode orientar avaliação posterior, mas não estabelece, isoladamente, aquisição ou ausência de responder relacional derivado.
+
+
+5. Encontro 3 — Avaliações situacionais práticas
+Realizar três atividades independentes: A) organização de documentos; B) conferência e preparação de pedido; C) comunicação profissional. Aplicar com cartões e materiais do “LADO A | Caderno de Materiais de Aplicação”, salvo na mesma pasta. Usar data simulada 15/06/2027 nas atividades A e B: trata-se de cenário fictício fixo. Registrar respostas antes e depois de qualquer ajuda. A meta não é produzir pressão artificial por velocidade; cronometre apenas quando a velocidade fizer parte da função analisada.
+Script padrão das atividades: “Vou apresentar uma tarefa como se estivéssemos em um local de trabalho. Primeiro quero conhecer sua maneira de fazer. Pode ler as instruções e pedir que eu repita. Se faltar informação, você pode perguntar. Ao terminar, me diga como conferiu seu trabalho.” Se ocorrer barreira de acesso, ajustar e registrar. Não atribuir falha à pessoa sem considerar a clareza das instruções.
+5.1 Atividade A — Organização de documentos (20–30 min)
+FUNÇÃO SIMULADA: apoio administrativo/arquivo. OBJETIVO: identificar categorias, seguir sequência, aplicar regra de urgência e responder a mudança de critério. Materiais: cartões D01–D12 do caderno, pastas “RH”, “FINANCEIRO” e “OPERAÇÕES”, dois envelopes “URGENTE” e “VERIFICAR”, folha para anotações.
+MONTAGEM: imprimir e recortar os cartões. Embaralhar D01–D12 e colocar todos visíveis, com texto legível e espaço para agrupamento. Deixar as três pastas disponíveis e um cartão fixo “Hoje é 15/06/2027 (simulação)”. Não antecipar a regra de pendência da fase 4.
+Fase A1 — Classificação por setor
+FALA EXATA: “Cada cartão é um documento e informa a qual setor pertence. Separe os do RH, os do Financeiro e os de Operações, deixando-os juntos nas respectivas pastas.” Não dar exemplos resolvidos. Critério de registro: quantidade de cartões corretamente separados, 0–12. Gabarito de setor: RH D01, D05, D08, D12; Financeiro D02, D04, D07, D10; Operações D03, D06, D09, D11.
+Fase A2 — Sequência por prazo
+FALA EXATA: “Agora, dentro de cada setor, organize os cartões do prazo mais próximo para o prazo mais distante. Use as datas de cada cartão.” Permitir apresentação das datas em linha ou pilha. Gabarito: RH D12 (14/06), D01 (16/06), D08 (19/06), D05 (22/06); Financeiro D04 (14/06), D07 (16/06), D02 (20/06), D10 (23/06); Operações D11 (15/06), D06 (17/06), D03 (18/06), D09 (21/06). Medidas: 3 grupos ordenados corretamente (0–3) e quantidade de cartões em posição correta (0–12).
+Fase A3 — Identificação de urgentes
+FALA EXATA: “Neste exercício, um prazo é urgente se for até 17/06/2027, incluindo esse dia. Sem desfazer a organização, marque os urgentes.” Gabarito: D12, D04, D11, D01, D07 e D06 (6 itens). Critério: identificações corretas sobre 12 cartões; registrar falsos positivos e falsos negativos. Não atribuir urgência a status PENDENTE se a regra ainda não o solicitou.
+Fase A4 — Regra nova e comunicação
+FALA EXATA: “Chegou uma nova orientação: documentos com o campo ‘PENDENTE’ devem ficar em VERIFICAR, mesmo se forem urgentes. Os demais continuam no setor. Ajuste a organização e avise quais documentos foram separados.” Gabarito: D04 e D11 vão para VERIFICAR, sem perda dos dados de setor e prazo; comunicação clara de que são pendentes. Critérios: separar ambos (0–2), reorganizar após mudança, comunicar condição relevante ao avaliador e pedir esclarecimento se necessário.
+OBSERVAR: critério de categorização, análise de datas, seguimento de instruções, uso espontâneo de checklist, conferência do próprio trabalho, respostas a uma regra que muda e comunicação de pendências. Registrar primeiro a execução espontânea e depois experimentar apoios, se úteis: legenda de setores, exemplo com cartão novo, lista por etapas. Não penalizar escolha de método alternativo correto.
+REGISTRO A: A1 acertos por setor __/12; A2 grupos ordenados __/3 e cartões corretamente posicionados __/12; A3 urgentes corretos __/6 e não urgentes corretamente deixados __/6; A4 pendências separadas __/2; comunicação __; solicitação de esclarecimento __; ajudas e efeitos __; condições __; comentários __.
+5.2 Atividade B — Conferência de pedido e estoque (20–30 min)
+FUNÇÃO SIMULADA: auxiliar de estoque/expedição. OBJETIVO: conferir códigos, quantidades e condições antes de separar um pedido. Materiais: cartões de estoque P101, P102, P203, P204, P305, P306, P407, P408, P409, P410; pedido O-17; três recipientes “SEPARAR”, “IMPEDIMENTO” e “CONFERIDO”; fichas vazias simulando unidades.
+MONTAGEM: distribuir cartões misturados sobre a mesa. Anotar no quadro “Hoje = 15/06/2027 — data de exercício”. Deixar o pedido O-17 visível. Ao separar produtos, o participante pode usar cartões como representação; não é necessário movimentar objetos reais. Explicar que pode interromper quando a regra não permitir completar uma linha.
+Fase B1 — Leitura de regras e pedido
+Ler ou apresentar as regras impressas: (1) separar somente o código idêntico ao solicitado; (2) separar a quantidade exata, sem substituir produto sem autorização; (3) não separar item avariado; (4) não separar item com validade anterior a 15/06/2027; (5) quantidade insuficiente: registrar a divergência e pedir decisão do responsável. Perguntar “Antes de começar, há alguma informação que precisa ser esclarecida?”; registrar, mas não exigir uma pergunta quando tudo está claro.
+FALA EXATA: “Prepare o pedido O-17 utilizando as regras. Coloque em SEPARAR o que puder seguir e em IMPEDIMENTO ou em anotação o que não puder. Ao final, explique o status do pedido.”
+Fase B2 — Separação e verificação
+PEDIDO O-17: P101 pasta azul, 3 unidades; P203 caixa pequena, 2 unidades; P305 caneta azul, 1 unidade; P408 etiqueta térmica, 2 unidades; P407 fita adesiva, 1 unidade. Não permitir substituição de P203 por P204 ou de P305 por P306 sem autorização.
+GABARITO: P101 pode ser separado (estoque 5, íntegro); P407 pode ser separado (estoque 3, íntegro). P203 tem somente 1 unidade e pedido de 2: divergência; P305 está avariado: impedimento; P408 tem validade 10/06/2027 e data de exercício é 15/06/2027: vencido. Pedido completo não pode ser liberado sem decisão do responsável. Separação apta: 3 unidades P101 + 1 unidade P407. Demais itens devem ser comunicados como impedimento.
+Fase B3 — Comunicação de pendência e regra alterada
+FALA EXATA: “Como você informaria ao responsável o que já está separado e o que precisa ser resolvido?” Critério: informar os dois itens aptos e os três impedimentos ou informar de forma compreensível que há pendências que impedem concluir o pedido e detalhá-las quando solicitado.
+Depois, FALA EXATA: “O responsável autorizou separar apenas o material que atende às regras e deixar o restante pendente. O que você registra como CONFERIDO e o que permanece em IMPEDIMENTO?” Critério: P101 e P407 conferidos; P203, P305 e P408 pendentes. Registrar se reorganizou sob nova orientação e quais ajudas foram necessárias.
+OBSERVAR: seguimento de regra condicional, checagem de código, comparação de quantidades e datas, detecção de divergência, busca de esclarecimento e comunicação. Não usar produtos reais vencidos ou que possam causar risco. Se a pessoa não compreende data de validade, testar com representação visual sem concluir incapacidade laboral generalizada.
+REGISTRO B: códigos corretos __/5; quantidades corretas nas linhas aptas __/2; impedimentos corretamente identificados __/3; substituições não autorizadas __; relato de pendências __; resposta à regra nova __; independência/pistas __; observações __.
+5.3 Atividade C — Comunicação profissional e entrevista simulada (20–30 min)
+FUNÇÃO SIMULADA: situações de recebimento de trabalho, informação ao colega e conversa de seleção. Utilizar fala, escrita, comunicação alternativa ou outro formato funcional. Avaliar pertinência comunicativa e capacidade de obter/transmitir informações relevantes. Não exigir contato visual, postura específica, tom de voz típico ou supressão de movimentos autorregulatórios.
+Cena C1 — Instrução incompleta
+PAPEL DO AVALIADOR (supervisor): “Preciso que você organize os relatórios e entregue ainda hoje.” Não informar quais relatórios, critério de organização nem destinatário, a menos que a pessoa solicite. Se perguntar, responder: “São os relatórios de maio, em ordem de data, para a recepção.” CRITÉRIO: solicitar ao menos uma informação necessária antes de executar, ou explicitar hipótese e verificar sua adequação. Caso execute por conta própria, registrar como escolha observada e verificar resultado, sem rotular automaticamente como falha social.
+Cena C2 — Informação que o colega não recebeu
+CONTEXTO: “Você concluiu a conferência. O colega Bruno está esperando porque não sabe que ela terminou.” AVALIADOR (como Bruno): “Ainda preciso esperar?” CRITÉRIO: transmitir que terminou e, quando relevante, o que Bruno já pode fazer. Se a pessoa preferir mensagem escrita, aceitar. Observar adequação da informação ao conhecimento do colega.
+Cena C3 — Feedback e mudança de prioridade
+AVALIADOR (supervisor): “Você estava organizando as pastas, mas surgiu uma demanda nova. Precisamos primeiro dos documentos urgentes. Pode reorganizar a ordem?” Se houver discordância ou desconforto, acolher pedido de explicação. CRITÉRIO: verificar a nova prioridade e indicar uma sequência viável, pedir dados que faltarem ou negociar recurso necessário. Não exigir concordância automática nem abandonar necessidade legítima de esclarecimento.
+Cena C4 — Entrevista de emprego
+AVALIADOR (recrutador): fazer quatro perguntas em ordem variável: (a) “Que atividades você já realiza com segurança?” (b) “Por que essa função lhe interessa?” (c) “O que você faria se não entendesse uma instrução?” (d) “Que recurso ou condição ajuda você a trabalhar bem?” Em seguida: “Que pergunta você gostaria de fazer sobre este trabalho?”
+CRITÉRIO POR PERGUNTA: resposta pertinente ao conteúdo, com informação concreta ou exemplo quando possível; aceitar solicitação de tempo, apoio escrito e resposta alternativa. Na pergunta final, considerar pertinente perguntar sobre tarefas, jornada, treinamento, ambiente, remuneração, supervisão, acessibilidade ou processo de seleção. Não avaliar carisma, naturalidade ou “normalidade” de comunicação.
+REGISTRO C: C1 identifica lacuna/comunica __; C2 repassa informação útil __; C3 responde à mudança com estratégia __; C4 respostas pertinentes __/4; perguntas pertinentes do candidato __; modalidade de comunicação __; apoio utilizado __; observações __.
+5.4 Atividade D — Transferência para outro contexto (opcional, 10–15 min)
+Oferecer um cenário diferente das tarefas de escritório e estoque: organização de seis inscrições para um evento. Explicar apenas que “é preciso localizar participantes pela oficina escolhida e ordenar inscrições pela hora de chegada”. Apresentar cartões E01–E06 do Caderno. Solicitar: (1) agrupe por oficina; (2) ordene cada grupo por hora; (3) diga como poderia conferir se faltou alguém. Não ensinar explicitamente a estratégia que foi usada na Atividade A; registrar se transfere procedimentos de classificação e revisão. Se houver familiaridade com eventos, trocar por contexto igualmente novo e registrar.
+Gabarito D: grupo RPG E01 (09:05), E03 (09:17), E05 (09:31); grupo MOBILIDADE E02 (09:10), E04 (09:22), E06 (09:40). Conferência adequada: cotejar os seis cartões com uma lista/checklist por grupo, contar itens ou identificar duplicidades. Desempenho novo exige cautela: transferir uma estratégia numa sessão não demonstra generalização ampla.
+6. Registro integrado e interpretação
+A análise deve integrar quatro fontes: (1) relato e preferências do próprio participante; (2) desempenho sob condições padronizadas; (3) desempenho com apoios e adaptações; (4) evidências ecológicas futuras, quando disponíveis. Separar descrições de hipóteses. Registrar o que a pessoa faz em contexto e com qual assistência, e não atribuir dificuldades diretamente ao diagnóstico.
+6.1 Quadro de síntese para preenchimento
+INTERESSES: atividades procuradas __________ | atividades que deseja evitar __________ | funções que gostaria de experimentar __________
+SONDAGENS RFT: eixos com exemplos independentes __________________ | eixos com necessidade de novos exemplos __________________ | apoios que melhoraram desempenho __________________
+SIMULAÇÃO A: acertos/critério __________ | mudanças de instrução __________ | apoios úteis __________
+SIMULAÇÃO B: acertos/critério __________ | impedimentos comunicados __________ | apoios úteis __________
+SIMULAÇÃO C: informações solicitadas/comunicadas __________ | perguntas feitas __________ | modalidade preferida __________
+SIMULAÇÃO D (se realizada): exemplos de transferência __________ | dúvidas sobre generalização __________
+CONDIÇÕES AMBIENTAIS: facilitadores __________ | barreiras relatadas/observadas __________ | modificações testadas __________
+OBSERVAÇÕES QUE PRECISAM SER TESTADAS EM AMBIENTE REAL: ______________________________________
+6.2 Matriz de correspondência pessoa–posto
+Para cada função de interesse, listar: nome do posto; tarefas realmente essenciais; frequência e duração; nível de precisão; necessidade de contato social; exigências de comunicação; ferramentas; características sensoriais; ritmo e previsibilidade; treinamentos disponíveis; apoios negociáveis; interesses do participante; evidências observadas em atividades análogas; lacunas de informação. A correspondência deve considerar possibilidade de aprendizagem e adaptações — nunca apenas o resultado da entrevista.
+Exemplo preenchido (HIPOTÉTICO): Função: auxiliar de arquivo. Requisitos: classificar por setor, seguir checklist, sinalizar documentação pendente. Evidência observada: agrupou 11/12 documentos sem ajuda e 12/12 com legenda de setor; identificou pendências após a nova regra com cartão visual; prefere rotina previsível. Próximo passo: experimentar tarefas de arquivo reais com checklist e avaliar estabilidade após mudança de ordem. Este exemplo não é dado de nenhum participante.
+7. Devolutiva e plano individualizado
+Conduzir devolutiva colaborativa em linguagem acessível. Começar pelas atividades valorizadas pelo participante e pelos repertórios observados; explicar lacunas como “ainda precisamos avaliar/ensinar/testar em outro contexto”, e não como características fixas. Apresentar duas ou três oportunidades profissionais para exploração, nunca um destino ocupacional imposto. Solicitar que a pessoa corrija informações do perfil e escolha objetivos prioritários.
+7.1 Modelo de Perfil Profissional Individualizado
+Participante: ____________ | Data: ____________ | Profissionais: ____________
+Objetivos e escolhas do participante (palavras dele): __________________________________________________
+Histórico e experiências relevantes: __________________________________________________________________
+Repertórios profissionais observados, com exemplos e contextos: ______________________________________
+Repertórios relacionais observados, com exemplos e limites da evidência: ______________________________
+Desempenho nas simulações sem apoio e com apoio: _______________________________________________
+Condições de acessibilidade, sensoriais e de comunicação escolhidas: __________________________________
+Habilidades a desenvolver em situações específicas: ________________________________________________
+Postos de trabalho a explorar e correspondência com tarefas reais: _____________________________________
+Plano colaborativo de experiências e encaminhamentos: ____________________________________________
+Aspectos que permanecem não avaliados: _______________________________________________________
+Revisado e validado pelo participante em: ________________________________________________________
+7.2 Ficha de objetivos de ensino (preencher uma por meta)
+META 1 (formato observável): Diante de __________ (antecedente), o participante __________ (resposta), com __________ (apoio permitido), em ___ de ___ oportunidades, em pelo menos ___ contextos/pessoas, até __________ (prazo acordado).
+Linha de base: __________ | procedimento: instrução/modelação/prática/feedback ou outro __________ | forma de reforçamento e escolhas do participante __________ | critério de aquisição __________ | teste de generalização __________ | manutenção __________ | responsável __________.
+META 2 (formato observável): Diante de __________, participante __________, com __________, critério __________, avaliação __________.
+META 3 (formato observável): Diante de __________, participante __________, com __________, critério __________, avaliação __________.
+Exemplo de meta funcional: Diante de instrução profissional incompleta, solicitar ou escrever ao menos uma pergunta necessária para iniciar a tarefa em 4 de 5 oportunidades distribuídas entre dois interlocutores, com instrução escrita disponível e sem pista que contenha a pergunta, por duas avaliações consecutivas. Individualizar critério à demanda do posto e às preferências do participante.
+8. Atividade observacional em empresa parceira (etapa complementar)
+Quando houver interesse do participante, consentimento apropriado e parceria disponível: (1) análise prévia das tarefas do posto; (2) reunião com supervisor para definir atividades seguras e razoáveis; (3) visita/exploração com ajustes ambientais; (4) observação de 2 a 4 horas, tempo flexível conforme atividade, sem criar exigências indevidas; (5) registro por tarefa, autonomia, ajudas, comunicação de problemas, segurança e satisfação; (6) revisão da correspondência pessoa–posto. Não apresentar esse tempo como carga horária validada universalmente.
+FORMULÁRIO DE OBSERVAÇÃO: empresa/contexto __________ | função __________ | tarefa e passos essenciais __________ | condições antecedentes __________ | resposta observada por passo __________ | tipos de ajuda __________ | barreiras __________ | adaptações úteis __________ | avaliação subjetiva do participante __________ | oportunidade de continuidade __________.
+9. Checklist de qualidade da aplicação
+• Consentimento, finalidade, preferência de comunicação e condições de acessibilidade foram esclarecidos.
+• Entrevista registrou exemplos concretos, preferências e fontes de informação.
+• Sondas sem ajuda foram registradas antes de qualquer ensino ou correção.
+• Itens não observados foram marcados como NO, sem atribuir nota zero.
+• Gabaritos foram mantidos apenas com o aplicador, não com o participante.
+• Materiais, versão, mudanças nas instruções e apoios foram documentados.
+• Foram avaliados tanto acertos quanto estratégias funcionais de pedir informações e manejar incertezas.
+• Perfil descreve contextos observados e não converte o resultado em diagnóstico, ranking ou exclusão profissional.
+• Devolutiva inclui escolhas e avaliação de utilidade pelo participante; compartilhamento externo depende de autorização.
+10. Referência dos materiais anexos
+O Caderno de Materiais de Aplicação contém os cartões D01–D12, os cartões P101–P410, o Pedido O-17, as regras impressas, os cartões E01–E06 e folhas simples de registro do avaliador e do participante. Conservar o caderno sem gabarito na mesa do participante; usar o gabarito somente neste manual. Os procedimentos constituem versão piloto interna do LADO A e devem receber revisão clínica e estudo de confiabilidade antes de qualquer alegação de validade de medida.

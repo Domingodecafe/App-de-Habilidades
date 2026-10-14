@@ -1,0 +1,388 @@
+{
+  "version": "Piloto digital 0.1",
+  "sourceVersion": "Manual piloto 1.0 — 13/10/2026",
+  "simulatedDate": "15/06/2027",
+  "axes": [
+    "Coordenação",
+    "Distinção",
+    "Oposição",
+    "Comparação",
+    "Hierarquia",
+    "Temporal",
+    "Espacial",
+    "Dêitico",
+    "Condicional",
+    "Analogia"
+  ],
+  "blocks": [
+    "Interesses, trajetórias e objetivos",
+    "Aprendizagem, instruções e tarefas",
+    "Comunicação, relações e resolução de problemas",
+    "Ambiente, ritmo, autorregulação e apoios",
+    "Compromisso e decisão compartilhada"
+  ],
+  "interview": [
+    {
+      "id": "D01",
+      "text": "Quando pensa em trabalhar, que tipo de atividade ou função chama sua atenção?",
+      "block": 0
+    },
+    {
+      "id": "D02",
+      "text": "O que você gostaria que um trabalho lhe proporcionasse (ex.: renda, autonomia, contato social, interesse, rotina)?",
+      "block": 0
+    },
+    {
+      "id": "D03",
+      "text": "Que atividades você gosta de fazer e consegue explicar como realiza?",
+      "block": 0
+    },
+    {
+      "id": "D04",
+      "text": "Conte uma atividade, mesmo fora de um emprego formal, pela qual já foi responsável. O que fazia do começo ao fim?",
+      "block": 0
+    },
+    {
+      "id": "D05",
+      "text": "Já frequentou curso, estágio, trabalho, voluntariado ou projeto? O que lhe agradou e o que foi difícil em cada situação?",
+      "block": 0
+    },
+    {
+      "id": "D06",
+      "text": "Quais tarefas prefere evitar? O que nelas torna a experiência desagradável ou difícil?",
+      "block": 0
+    },
+    {
+      "id": "D07",
+      "text": "Você prefere trabalhar com informações, objetos, pessoas, computadores, atividades externas ou uma combinação? Pode dar exemplos?",
+      "block": 0
+    },
+    {
+      "id": "D08",
+      "text": "Se pudesse experimentar dois tipos de posto de trabalho, quais escolheria primeiro? Por quê?",
+      "block": 0
+    },
+    {
+      "id": "D09",
+      "text": "Como percebe que entendeu uma instrução e já pode começar?",
+      "block": 1
+    },
+    {
+      "id": "D10",
+      "text": "Se alguém explicar uma tarefa muito rapidamente, o que você costuma fazer?",
+      "block": 1
+    },
+    {
+      "id": "D11",
+      "text": "O que funciona melhor para aprender algo novo: ouvir, ler, ver alguém fazendo, experimentar ou combinar essas formas?",
+      "block": 1
+    },
+    {
+      "id": "D12",
+      "text": "Conte como você organiza uma tarefa com vários passos. Usa listas, aplicativos ou outra estratégia?",
+      "block": 1
+    },
+    {
+      "id": "D13",
+      "text": "O que faz quando recebe duas atividades com prazos diferentes?",
+      "block": 1
+    },
+    {
+      "id": "D14",
+      "text": "Lembre de uma ocasião em que precisou corrigir um erro. Como identificou o problema e o que fez?",
+      "block": 1
+    },
+    {
+      "id": "D15",
+      "text": "Quando a tarefa muda no meio do caminho, o que ajuda você a reorganizá-la?",
+      "block": 1
+    },
+    {
+      "id": "D16",
+      "text": "Você costuma revisar o próprio trabalho? O que confere antes de considerar uma tarefa finalizada?",
+      "block": 1
+    },
+    {
+      "id": "D17",
+      "text": "Se uma orientação estiver incompleta, como pode pedir os dados que faltam?",
+      "block": 2
+    },
+    {
+      "id": "D18",
+      "text": "O que costuma fazer quando discorda de uma orientação?",
+      "block": 2
+    },
+    {
+      "id": "D19",
+      "text": "Como gostaria de receber feedback sobre algo que pode melhorar?",
+      "block": 2
+    },
+    {
+      "id": "D20",
+      "text": "Conte uma experiência de fazer uma tarefa junto com outra pessoa. Como dividiram o trabalho?",
+      "block": 2
+    },
+    {
+      "id": "D21",
+      "text": "Quando outra pessoa depende de uma informação sua, como costuma informá-la?",
+      "block": 2
+    },
+    {
+      "id": "D22",
+      "text": "O que ajudaria você a pedir ajuda em um ambiente novo?",
+      "block": 2
+    },
+    {
+      "id": "D23",
+      "text": "Prefere realizar atividades com mais interação, com pouca interação ou varia conforme a atividade?",
+      "block": 2
+    },
+    {
+      "id": "D24",
+      "text": "Há situações de conversa ou reunião que exigem um esforço muito grande? Que mudanças ajudariam?",
+      "block": 2
+    },
+    {
+      "id": "D25",
+      "text": "Que características de um local ajudam na concentração (ruído, luz, movimento, temperatura, previsibilidade)?",
+      "block": 3
+    },
+    {
+      "id": "D26",
+      "text": "Que condições do ambiente costumam atrapalhar seu trabalho ou estudo?",
+      "block": 3
+    },
+    {
+      "id": "D27",
+      "text": "Quais sinais fazem você perceber que precisa de uma pausa? Como costuma comunicar isso?",
+      "block": 3
+    },
+    {
+      "id": "D28",
+      "text": "Em que horários e períodos do dia você percebe melhor rendimento?",
+      "block": 3
+    },
+    {
+      "id": "D29",
+      "text": "Que formatos de jornada ou de intervalos seriam mais adequados para você, dentro de suas necessidades e preferências?",
+      "block": 3
+    },
+    {
+      "id": "D30",
+      "text": "Você se sente mais confortável com tarefas repetitivas, variadas ou uma combinação?",
+      "block": 3
+    },
+    {
+      "id": "D31",
+      "text": "Quais recursos lhe ajudam a ter autonomia (checklist, agenda, instrução escrita, fone, supervisão, dupla)?",
+      "block": 3
+    },
+    {
+      "id": "D32",
+      "text": "Há alguma adaptação que você já utilizou e gostaria de manter em um trabalho?",
+      "block": 3
+    },
+    {
+      "id": "D33",
+      "text": "Em uma escala de preferência descrita por você, quais três tarefas mais gostaria de experimentar?",
+      "block": 4
+    },
+    {
+      "id": "D34",
+      "text": "Quais três condições de trabalho são importantes para você e não deveriam ser ignoradas?",
+      "block": 4
+    },
+    {
+      "id": "D35",
+      "text": "Quais tarefas você toparia treinar, mesmo ainda não sabendo fazê-las sozinho?",
+      "block": 4
+    },
+    {
+      "id": "D36",
+      "text": "Há algo importante sobre suas habilidades ou necessidades que eu não perguntei?",
+      "block": 4
+    }
+  ],
+  "probes": [
+    {
+      "id": "R1.1",
+      "axis": 0,
+      "prompt": "“Neste setor, a etiqueta LUMA indica o mesmo material que KIT-4. KIT-4 é o conjunto de envelopes. Se eu pedir LUMA, o que devo receber?”",
+      "criterion": "conjunto de envelopes (ou indicação do cartão correspondente)."
+    },
+    {
+      "id": "R1.2",
+      "axis": 0,
+      "prompt": "“Aqui, conferir um pedido significa revisar seus itens. No aviso aparece REVISAR. Esse aviso pede uma tarefa diferente de CONFERIR?”",
+      "criterion": "não, no contexto descrito é a mesma tarefa."
+    },
+    {
+      "id": "R1.3",
+      "axis": 0,
+      "prompt": "“A peça chamada TERA também é chamada P-8. Se alguém pedir P-8, que outro nome você poderia usar para indicar a mesma peça?”",
+      "criterion": "TERA."
+    },
+    {
+      "id": "R2.1",
+      "axis": 1,
+      "prompt": "“A etiqueta A11 tem código diferente de A12. A12 é o mesmo código que o cartão marcado A12. O cartão A11 tem o mesmo código que esse último?”",
+      "criterion": "não."
+    },
+    {
+      "id": "R2.2",
+      "axis": 1,
+      "prompt": "mostrar dois cartões azuis, A11 e A12. “A cor é igual. Posso considerar que os códigos de pedido são iguais?”",
+      "criterion": "não; cor não substitui código."
+    },
+    {
+      "id": "R2.3",
+      "axis": 1,
+      "prompt": "“Um formulário está PENDENTE e outro CONCLUÍDO. Eles podem seguir a mesma etapa de arquivamento, se a regra disser para arquivar só os concluídos?”",
+      "criterion": "não; apenas o concluído satisfaz a regra."
+    },
+    {
+      "id": "R3.1",
+      "axis": 2,
+      "prompt": "“Nesta máquina há apenas dois estados: LIGADO e DESLIGADO, que são opostos. Se não estiver LIGADA, qual é o outro estado possível?”",
+      "criterion": "desligada."
+    },
+    {
+      "id": "R3.2",
+      "axis": 2,
+      "prompt": "“SOL indica ATIVO; LUA indica INATIVO. ATIVO é o oposto de INATIVO. SOL e LUA indicam o mesmo estado ou estados opostos?”",
+      "criterion": "opostos."
+    },
+    {
+      "id": "R3.3",
+      "axis": 2,
+      "prompt": "“Se o comando anterior era INCLUIR na lista e o novo comando é EXCLUIR da lista, que mudança ocorreu?”",
+      "criterion": "orientação oposta, retirar em vez de adicionar."
+    },
+    {
+      "id": "R4.1",
+      "axis": 3,
+      "prompt": "“A tarefa X demora mais que Y. Y demora mais que Z. Entre X e Z, qual demora mais?”",
+      "criterion": "X."
+    },
+    {
+      "id": "R4.2",
+      "axis": 3,
+      "prompt": "“O serviço A termina antes do serviço B, e o B antes do C. Qual termina por último?”",
+      "criterion": "C."
+    },
+    {
+      "id": "R4.3",
+      "axis": 3,
+      "prompt": "“O pedido P é mais urgente que Q. Q é mais urgente que R. R é mais urgente ou menos urgente que P?”",
+      "criterion": "menos urgente."
+    },
+    {
+      "id": "R5.1",
+      "axis": 4,
+      "prompt": "“Todas as etiquetas deste exemplo são materiais de papelaria. Todos os materiais de papelaria pertencem ao grupo de suprimentos. As etiquetas pertencem ao grupo de suprimentos?”",
+      "criterion": "sim."
+    },
+    {
+      "id": "R5.2",
+      "axis": 4,
+      "prompt": "“Todo registro de estoque é um documento. Isso significa que todo documento é registro de estoque?”",
+      "criterion": "não."
+    },
+    {
+      "id": "R5.3",
+      "axis": 4,
+      "prompt": "“O setor de cadastro pertence ao departamento administrativo. O administrativo pertence à empresa. O cadastro faz parte da empresa?”",
+      "criterion": "sim."
+    },
+    {
+      "id": "R6.1",
+      "axis": 5,
+      "prompt": "“A conferência acontece antes do registro. O registro acontece antes da embalagem. A embalagem ocorre antes ou depois da conferência?”",
+      "criterion": "depois."
+    },
+    {
+      "id": "R6.2",
+      "axis": 5,
+      "prompt": "“A tarefa B será feita depois de A, mas antes de C. Em que ordem ficam A, B e C?”",
+      "criterion": "A → B → C."
+    },
+    {
+      "id": "R6.3",
+      "axis": 5,
+      "prompt": "“Ontem foi realizado o pedido; hoje será feita a conferência; amanhã a entrega. Se estamos no dia da conferência, a entrega já aconteceu?”",
+      "criterion": "não."
+    },
+    {
+      "id": "R7.1",
+      "axis": 6,
+      "prompt": "“A caixa A está à esquerda da B. A B está à esquerda da C. A caixa A está à direita ou à esquerda da C?”",
+      "criterion": "à esquerda."
+    },
+    {
+      "id": "R7.2",
+      "axis": 6,
+      "prompt": "“A pasta está dentro da gaveta. A gaveta fica debaixo da mesa. Onde está a pasta em relação à mesa?”",
+      "criterion": "na gaveta, debaixo da mesa; aceitar descrição equivalente."
+    },
+    {
+      "id": "R7.3",
+      "axis": 6,
+      "prompt": "colocar um cartão à direita de outro. “Se X fica à direita de Y, onde Y fica em relação a X?”",
+      "criterion": "à esquerda."
+    },
+    {
+      "id": "R8.1",
+      "axis": 7,
+      "prompt": "“Ana está na Mesa 1 e Bruno está na Mesa 2. Se Bruno disser ‘eu estou aqui’, quem é ‘eu’ e onde é ‘aqui’?”",
+      "criterion": "Bruno e Mesa 2."
+    },
+    {
+      "id": "R8.2",
+      "axis": 7,
+      "prompt": "“Agora imagine que você é Ana, na Mesa 1, e eu sou Bruno, na Mesa 2. Quando eu digo ‘você está aí’, a quem me refiro?”",
+      "criterion": "Ana (papel assumido pelo participante)."
+    },
+    {
+      "id": "R8.3",
+      "axis": 7,
+      "prompt": "“Ontem, Ana ainda não havia recebido o arquivo; hoje ele está com ela. Se Ana falar ‘agora eu tenho o arquivo’, isso descreve ontem ou hoje?”",
+      "criterion": "hoje."
+    },
+    {
+      "id": "R9.1",
+      "axis": 8,
+      "prompt": "“Se o cartão for vermelho, o pedido precisa ser revisado. Se precisar ser revisado, o supervisor deve ser avisado. O cartão está vermelho. O que deve acontecer?”",
+      "criterion": "revisar e avisar."
+    },
+    {
+      "id": "R9.2",
+      "axis": 8,
+      "prompt": "“A única regra informada é: se o cartão for vermelho, não embalar. Agora o cartão é azul. Só com essa regra você sabe que pode embalar?”",
+      "criterion": "não; faltam informações."
+    },
+    {
+      "id": "R9.3",
+      "axis": 8,
+      "prompt": "“Se houver divergência de quantidade, interrompa o pedido e solicite conferência. Você encontrou uma divergência. O que fará?”",
+      "criterion": "interromper/separar e solicitar conferência."
+    },
+    {
+      "id": "R10.1",
+      "axis": 9,
+      "prompt": "“No escritório, documentos são separados por assunto para serem encontrados mais facilmente. No estoque, os materiais precisam ser encontrados mais facilmente. Que ideia do escritório você poderia usar no estoque?”",
+      "criterion": "separar materiais por categoria/tipo ou outro critério declarado que facilite localizar."
+    },
+    {
+      "id": "R10.2",
+      "axis": 9,
+      "prompt": "“Documento está para pasta assim como peça pequena está para o quê, se o objetivo é guardar e localizar?”",
+      "criterion": "recipiente/caixa/organizador apropriado, com justificativa de mesma relação funcional."
+    },
+    {
+      "id": "R10.3",
+      "axis": 9,
+      "prompt": "“Você aprendeu a conferir nomes e datas em uma lista de documentos. Agora precisa conferir códigos e quantidades de produtos. O que no procedimento anterior pode ser aproveitado?”",
+      "criterion": "comparar cada item da lista com o item real e confirmar campos previstos, adaptando quais campos conferir."
+    }
+  ]
+}

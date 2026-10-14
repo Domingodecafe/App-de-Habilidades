@@ -1,0 +1,1652 @@
+{
+  "docs": [
+    {
+      "id": "D01",
+      "name": "Currículo",
+      "sector": "RH",
+      "date": "16/06/2027",
+      "status": "COMPLETO"
+    },
+    {
+      "id": "D02",
+      "name": "Nota fiscal",
+      "sector": "FINANCEIRO",
+      "date": "20/06/2027",
+      "status": "COMPLETO"
+    },
+    {
+      "id": "D03",
+      "name": "Formulário de estoque",
+      "sector": "OPERAÇÕES",
+      "date": "18/06/2027",
+      "status": "COMPLETO"
+    },
+    {
+      "id": "D04",
+      "name": "Reembolso",
+      "sector": "FINANCEIRO",
+      "date": "14/06/2027",
+      "status": "PENDENTE"
+    },
+    {
+      "id": "D05",
+      "name": "Plano de treinamento",
+      "sector": "RH",
+      "date": "22/06/2027",
+      "status": "COMPLETO"
+    },
+    {
+      "id": "D06",
+      "name": "Ordem de compra",
+      "sector": "OPERAÇÕES",
+      "date": "17/06/2027",
+      "status": "COMPLETO"
+    },
+    {
+      "id": "D07",
+      "name": "Recibo",
+      "sector": "FINANCEIRO",
+      "date": "16/06/2027",
+      "status": "COMPLETO"
+    },
+    {
+      "id": "D08",
+      "name": "Escala de equipe",
+      "sector": "RH",
+      "date": "19/06/2027",
+      "status": "COMPLETO"
+    },
+    {
+      "id": "D09",
+      "name": "Plano de manutenção",
+      "sector": "OPERAÇÕES",
+      "date": "21/06/2027",
+      "status": "COMPLETO"
+    },
+    {
+      "id": "D10",
+      "name": "Aviso de cobrança",
+      "sector": "FINANCEIRO",
+      "date": "23/06/2027",
+      "status": "COMPLETO"
+    },
+    {
+      "id": "D11",
+      "name": "Lista de inventário",
+      "sector": "OPERAÇÕES",
+      "date": "15/06/2027",
+      "status": "PENDENTE"
+    },
+    {
+      "id": "D12",
+      "name": "Solicitação de férias",
+      "sector": "RH",
+      "date": "14/06/2027",
+      "status": "COMPLETO"
+    }
+  ],
+  "products": [
+    {
+      "id": "P101",
+      "name": "Pasta azul",
+      "stock": 5,
+      "state": "ÍNTEGRO",
+      "expiry": "Não se aplica"
+    },
+    {
+      "id": "P102",
+      "name": "Pasta verde",
+      "stock": 4,
+      "state": "ÍNTEGRO",
+      "expiry": "Não se aplica"
+    },
+    {
+      "id": "P203",
+      "name": "Caixa pequena",
+      "stock": 1,
+      "state": "ÍNTEGRO",
+      "expiry": "Não se aplica"
+    },
+    {
+      "id": "P204",
+      "name": "Caixa média",
+      "stock": 5,
+      "state": "ÍNTEGRO",
+      "expiry": "Não se aplica"
+    },
+    {
+      "id": "P305",
+      "name": "Caneta azul",
+      "stock": 3,
+      "state": "AVARIADO",
+      "expiry": "Não se aplica"
+    },
+    {
+      "id": "P306",
+      "name": "Caneta preta",
+      "stock": 6,
+      "state": "ÍNTEGRO",
+      "expiry": "Não se aplica"
+    },
+    {
+      "id": "P407",
+      "name": "Fita adesiva",
+      "stock": 3,
+      "state": "ÍNTEGRO",
+      "expiry": "Não se aplica"
+    },
+    {
+      "id": "P408",
+      "name": "Etiqueta térmica",
+      "stock": 10,
+      "state": "ÍNTEGRO",
+      "expiry": "10/06/2027"
+    },
+    {
+      "id": "P409",
+      "name": "Envelope",
+      "stock": 5,
+      "state": "ÍNTEGRO",
+      "expiry": "Não se aplica"
+    },
+    {
+      "id": "P410",
+      "name": "Clipe",
+      "stock": 12,
+      "state": "ÍNTEGRO",
+      "expiry": "Não se aplica"
+    }
+  ],
+  "events": [
+    {
+      "id": "E01",
+      "name": "Alice",
+      "workshop": "RPG",
+      "time": "09:05"
+    },
+    {
+      "id": "E02",
+      "name": "Bento",
+      "workshop": "MOBILIDADE",
+      "time": "09:10"
+    },
+    {
+      "id": "E03",
+      "name": "Clara",
+      "workshop": "RPG",
+      "time": "09:17"
+    },
+    {
+      "id": "E04",
+      "name": "Davi",
+      "workshop": "MOBILIDADE",
+      "time": "09:22"
+    },
+    {
+      "id": "E05",
+      "name": "Eva",
+      "workshop": "RPG",
+      "time": "09:31"
+    },
+    {
+      "id": "E06",
+      "name": "Fábio",
+      "workshop": "MOBILIDADE",
+      "time": "09:40"
+    }
+  ],
+  "games": [
+    {
+      "id": "office",
+      "name": "Escritório Digital",
+      "description": "Classifique documentos, organize prazos e sinalize pendências.",
+      "origin": "Atividade A do manual",
+      "stages": [
+        {
+          "id": "A1",
+          "title": "Organização por setor",
+          "type": "classify",
+          "instruction": "Cada cartão é um documento e informa a qual setor pertence. Separe os do RH, os do Financeiro e os de Operações, deixando-os juntos nas respectivas pastas.",
+          "items": [
+            {
+              "id": "D01",
+              "name": "Currículo",
+              "sector": "RH",
+              "date": "16/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D02",
+              "name": "Nota fiscal",
+              "sector": "FINANCEIRO",
+              "date": "20/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D03",
+              "name": "Formulário de estoque",
+              "sector": "OPERAÇÕES",
+              "date": "18/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D04",
+              "name": "Reembolso",
+              "sector": "FINANCEIRO",
+              "date": "14/06/2027",
+              "status": "PENDENTE"
+            },
+            {
+              "id": "D05",
+              "name": "Plano de treinamento",
+              "sector": "RH",
+              "date": "22/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D06",
+              "name": "Ordem de compra",
+              "sector": "OPERAÇÕES",
+              "date": "17/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D07",
+              "name": "Recibo",
+              "sector": "FINANCEIRO",
+              "date": "16/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D08",
+              "name": "Escala de equipe",
+              "sector": "RH",
+              "date": "19/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D09",
+              "name": "Plano de manutenção",
+              "sector": "OPERAÇÕES",
+              "date": "21/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D10",
+              "name": "Aviso de cobrança",
+              "sector": "FINANCEIRO",
+              "date": "23/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D11",
+              "name": "Lista de inventário",
+              "sector": "OPERAÇÕES",
+              "date": "15/06/2027",
+              "status": "PENDENTE"
+            },
+            {
+              "id": "D12",
+              "name": "Solicitação de férias",
+              "sector": "RH",
+              "date": "14/06/2027",
+              "status": "COMPLETO"
+            }
+          ],
+          "options": [
+            "RH",
+            "FINANCEIRO",
+            "OPERAÇÕES"
+          ],
+          "field": "sector"
+        },
+        {
+          "id": "A2",
+          "title": "Sequência por prazo",
+          "type": "order",
+          "instruction": "Agora, dentro de cada setor, organize os cartões do prazo mais próximo para o prazo mais distante. Use as datas de cada cartão.",
+          "groups": [
+            {
+              "name": "RH",
+              "ids": [
+                "D05",
+                "D08",
+                "D01",
+                "D12"
+              ],
+              "expected": [
+                "D12",
+                "D01",
+                "D08",
+                "D05"
+              ]
+            },
+            {
+              "name": "FINANCEIRO",
+              "ids": [
+                "D10",
+                "D02",
+                "D07",
+                "D04"
+              ],
+              "expected": [
+                "D04",
+                "D07",
+                "D02",
+                "D10"
+              ]
+            },
+            {
+              "name": "OPERAÇÕES",
+              "ids": [
+                "D09",
+                "D03",
+                "D06",
+                "D11"
+              ],
+              "expected": [
+                "D11",
+                "D06",
+                "D03",
+                "D09"
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "D01",
+              "name": "Currículo",
+              "sector": "RH",
+              "date": "16/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D02",
+              "name": "Nota fiscal",
+              "sector": "FINANCEIRO",
+              "date": "20/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D03",
+              "name": "Formulário de estoque",
+              "sector": "OPERAÇÕES",
+              "date": "18/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D04",
+              "name": "Reembolso",
+              "sector": "FINANCEIRO",
+              "date": "14/06/2027",
+              "status": "PENDENTE"
+            },
+            {
+              "id": "D05",
+              "name": "Plano de treinamento",
+              "sector": "RH",
+              "date": "22/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D06",
+              "name": "Ordem de compra",
+              "sector": "OPERAÇÕES",
+              "date": "17/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D07",
+              "name": "Recibo",
+              "sector": "FINANCEIRO",
+              "date": "16/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D08",
+              "name": "Escala de equipe",
+              "sector": "RH",
+              "date": "19/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D09",
+              "name": "Plano de manutenção",
+              "sector": "OPERAÇÕES",
+              "date": "21/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D10",
+              "name": "Aviso de cobrança",
+              "sector": "FINANCEIRO",
+              "date": "23/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D11",
+              "name": "Lista de inventário",
+              "sector": "OPERAÇÕES",
+              "date": "15/06/2027",
+              "status": "PENDENTE"
+            },
+            {
+              "id": "D12",
+              "name": "Solicitação de férias",
+              "sector": "RH",
+              "date": "14/06/2027",
+              "status": "COMPLETO"
+            }
+          ]
+        },
+        {
+          "id": "A3",
+          "title": "Identificação de urgentes",
+          "type": "mark",
+          "instruction": "Neste exercício, um prazo é urgente se for até 17/06/2027, incluindo esse dia. Sem desfazer a organização, marque os urgentes.",
+          "items": [
+            {
+              "id": "D01",
+              "name": "Currículo",
+              "sector": "RH",
+              "date": "16/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D02",
+              "name": "Nota fiscal",
+              "sector": "FINANCEIRO",
+              "date": "20/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D03",
+              "name": "Formulário de estoque",
+              "sector": "OPERAÇÕES",
+              "date": "18/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D04",
+              "name": "Reembolso",
+              "sector": "FINANCEIRO",
+              "date": "14/06/2027",
+              "status": "PENDENTE"
+            },
+            {
+              "id": "D05",
+              "name": "Plano de treinamento",
+              "sector": "RH",
+              "date": "22/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D06",
+              "name": "Ordem de compra",
+              "sector": "OPERAÇÕES",
+              "date": "17/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D07",
+              "name": "Recibo",
+              "sector": "FINANCEIRO",
+              "date": "16/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D08",
+              "name": "Escala de equipe",
+              "sector": "RH",
+              "date": "19/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D09",
+              "name": "Plano de manutenção",
+              "sector": "OPERAÇÕES",
+              "date": "21/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D10",
+              "name": "Aviso de cobrança",
+              "sector": "FINANCEIRO",
+              "date": "23/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D11",
+              "name": "Lista de inventário",
+              "sector": "OPERAÇÕES",
+              "date": "15/06/2027",
+              "status": "PENDENTE"
+            },
+            {
+              "id": "D12",
+              "name": "Solicitação de férias",
+              "sector": "RH",
+              "date": "14/06/2027",
+              "status": "COMPLETO"
+            }
+          ],
+          "expected": [
+            "D12",
+            "D04",
+            "D11",
+            "D01",
+            "D07",
+            "D06"
+          ]
+        },
+        {
+          "id": "A4",
+          "title": "Nova regra e comunicação",
+          "type": "classify",
+          "instruction": "Chegou uma nova orientação: documentos com o campo “PENDENTE” devem ficar em VERIFICAR, mesmo se forem urgentes. Os demais continuam no setor. Ajuste a organização e avise quais documentos foram separados.",
+          "items": [
+            {
+              "id": "D01",
+              "name": "Currículo",
+              "sector": "RH",
+              "date": "16/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D02",
+              "name": "Nota fiscal",
+              "sector": "FINANCEIRO",
+              "date": "20/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D03",
+              "name": "Formulário de estoque",
+              "sector": "OPERAÇÕES",
+              "date": "18/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D04",
+              "name": "Reembolso",
+              "sector": "FINANCEIRO",
+              "date": "14/06/2027",
+              "status": "PENDENTE"
+            },
+            {
+              "id": "D05",
+              "name": "Plano de treinamento",
+              "sector": "RH",
+              "date": "22/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D06",
+              "name": "Ordem de compra",
+              "sector": "OPERAÇÕES",
+              "date": "17/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D07",
+              "name": "Recibo",
+              "sector": "FINANCEIRO",
+              "date": "16/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D08",
+              "name": "Escala de equipe",
+              "sector": "RH",
+              "date": "19/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D09",
+              "name": "Plano de manutenção",
+              "sector": "OPERAÇÕES",
+              "date": "21/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D10",
+              "name": "Aviso de cobrança",
+              "sector": "FINANCEIRO",
+              "date": "23/06/2027",
+              "status": "COMPLETO"
+            },
+            {
+              "id": "D11",
+              "name": "Lista de inventário",
+              "sector": "OPERAÇÕES",
+              "date": "15/06/2027",
+              "status": "PENDENTE"
+            },
+            {
+              "id": "D12",
+              "name": "Solicitação de férias",
+              "sector": "RH",
+              "date": "14/06/2027",
+              "status": "COMPLETO"
+            }
+          ],
+          "options": [
+            "RH",
+            "FINANCEIRO",
+            "OPERAÇÕES",
+            "VERIFICAR"
+          ],
+          "field": "sector",
+          "override": {
+            "D04": "VERIFICAR",
+            "D11": "VERIFICAR"
+          },
+          "message": true
+        }
+      ]
+    },
+    {
+      "id": "stock",
+      "name": "Estoque Digital",
+      "description": "Confira o pedido O-17 e comunique os impedimentos.",
+      "origin": "Atividade B do manual",
+      "stages": [
+        {
+          "id": "B2",
+          "title": "Pedido O-17",
+          "type": "stock",
+          "instruction": "Prepare o pedido O-17 utilizando as regras. Coloque em SEPARAR o que puder seguir e em IMPEDIMENTO ou em anotação o que não puder. Ao final, explique o status do pedido.",
+          "items": [
+            {
+              "id": "P101",
+              "name": "Pasta azul",
+              "stock": 5,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P102",
+              "name": "Pasta verde",
+              "stock": 4,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P203",
+              "name": "Caixa pequena",
+              "stock": 1,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P204",
+              "name": "Caixa média",
+              "stock": 5,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P305",
+              "name": "Caneta azul",
+              "stock": 3,
+              "state": "AVARIADO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P306",
+              "name": "Caneta preta",
+              "stock": 6,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P407",
+              "name": "Fita adesiva",
+              "stock": 3,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P408",
+              "name": "Etiqueta térmica",
+              "stock": 10,
+              "state": "ÍNTEGRO",
+              "expiry": "10/06/2027"
+            },
+            {
+              "id": "P409",
+              "name": "Envelope",
+              "stock": 5,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P410",
+              "name": "Clipe",
+              "stock": 12,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            }
+          ],
+          "order": [
+            {
+              "id": "P101",
+              "quantity": 3
+            },
+            {
+              "id": "P203",
+              "quantity": 2
+            },
+            {
+              "id": "P305",
+              "quantity": 1
+            },
+            {
+              "id": "P408",
+              "quantity": 2
+            },
+            {
+              "id": "P407",
+              "quantity": 1
+            }
+          ],
+          "expected": {
+            "P101": {
+              "quantity": 3,
+              "decision": "SEPARAR"
+            },
+            "P407": {
+              "quantity": 1,
+              "decision": "SEPARAR"
+            },
+            "P203": {
+              "quantity": 0,
+              "decision": "IMPEDIMENTO",
+              "reason": "Quantidade insuficiente"
+            },
+            "P305": {
+              "quantity": 0,
+              "decision": "IMPEDIMENTO",
+              "reason": "Avariado"
+            },
+            "P408": {
+              "quantity": 0,
+              "decision": "IMPEDIMENTO",
+              "reason": "Vencido"
+            }
+          }
+        },
+        {
+          "id": "B3",
+          "title": "Orientação alterada",
+          "type": "classify",
+          "instruction": "O responsável autorizou separar apenas o material que atende às regras e deixar o restante pendente. O que você registra como CONFERIDO e o que permanece em IMPEDIMENTO?",
+          "items": [
+            {
+              "id": "P101",
+              "name": "Pasta azul",
+              "stock": 5,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P203",
+              "name": "Caixa pequena",
+              "stock": 1,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P305",
+              "name": "Caneta azul",
+              "stock": 3,
+              "state": "AVARIADO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P407",
+              "name": "Fita adesiva",
+              "stock": 3,
+              "state": "ÍNTEGRO",
+              "expiry": "Não se aplica"
+            },
+            {
+              "id": "P408",
+              "name": "Etiqueta térmica",
+              "stock": 10,
+              "state": "ÍNTEGRO",
+              "expiry": "10/06/2027"
+            }
+          ],
+          "options": [
+            "CONFERIDO",
+            "IMPEDIMENTO"
+          ],
+          "override": {
+            "P101": "CONFERIDO",
+            "P407": "CONFERIDO",
+            "P203": "IMPEDIMENTO",
+            "P305": "IMPEDIMENTO",
+            "P408": "IMPEDIMENTO"
+          },
+          "message": true
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "Comunicação Profissional",
+      "description": "Troque informações e responda a situações de trabalho.",
+      "origin": "Atividade C do manual. Respostas abertas revisadas pelo avaliador.",
+      "stages": [
+        {
+          "id": "C1",
+          "title": "Instrução incompleta",
+          "type": "chat",
+          "instruction": "Preciso que você organize os relatórios e entregue ainda hoje.",
+          "clarification": "São os relatórios de maio, em ordem de data, para a recepção.",
+          "criterion": "Solicitar ao menos uma informação necessária antes de executar, ou explicitar hipótese e verificar sua adequação. Não rotular automaticamente execução espontânea como falha social."
+        },
+        {
+          "id": "C2",
+          "title": "Mensagem ao colega",
+          "type": "chat",
+          "instruction": "Você concluiu a conferência. O colega Bruno está esperando porque não sabe que ela terminou. Bruno pergunta: “Ainda preciso esperar?”",
+          "criterion": "Transmitir que terminou e, quando relevante, o que Bruno já pode fazer. Aceitar comunicação alternativa."
+        },
+        {
+          "id": "C3",
+          "title": "Mudança de prioridade",
+          "type": "chat",
+          "instruction": "Você estava organizando as pastas, mas surgiu uma demanda nova. Precisamos primeiro dos documentos urgentes. Pode reorganizar a ordem?",
+          "criterion": "Verificar a nova prioridade e indicar uma sequência viável, pedir dados que faltarem ou negociar recurso necessário. Não exigir concordância automática."
+        },
+        {
+          "id": "C4",
+          "title": "Entrevista simulada",
+          "type": "interview",
+          "instruction": "Responda às perguntas sobre esta função. Você pode registrar as respostas por escrito ou utilizar seu modo de comunicação preferido.",
+          "questions": [
+            "Que atividades você já realiza com segurança?",
+            "Por que essa função lhe interessa?",
+            "O que você faria se não entendesse uma instrução?",
+            "Que recurso ou condição ajuda você a trabalhar bem?",
+            "Que pergunta você gostaria de fazer sobre este trabalho?"
+          ],
+          "criterion": "Respostas pertinentes ao conteúdo. Não avaliar contato visual, carisma, tom de voz ou supressão de movimentos autorregulatórios."
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "name": "Organização de Eventos",
+      "description": "Use estratégias de organização em outro contexto.",
+      "origin": "Atividade D do manual (opcional no original).",
+      "stages": [
+        {
+          "id": "E1",
+          "title": "Inscrições por oficina",
+          "type": "classify",
+          "instruction": "É preciso localizar participantes pela oficina escolhida e ordenar inscrições pela hora de chegada. Agrupe por oficina.",
+          "items": [
+            {
+              "id": "E01",
+              "name": "Alice",
+              "workshop": "RPG",
+              "time": "09:05"
+            },
+            {
+              "id": "E02",
+              "name": "Bento",
+              "workshop": "MOBILIDADE",
+              "time": "09:10"
+            },
+            {
+              "id": "E03",
+              "name": "Clara",
+              "workshop": "RPG",
+              "time": "09:17"
+            },
+            {
+              "id": "E04",
+              "name": "Davi",
+              "workshop": "MOBILIDADE",
+              "time": "09:22"
+            },
+            {
+              "id": "E05",
+              "name": "Eva",
+              "workshop": "RPG",
+              "time": "09:31"
+            },
+            {
+              "id": "E06",
+              "name": "Fábio",
+              "workshop": "MOBILIDADE",
+              "time": "09:40"
+            }
+          ],
+          "options": [
+            "RPG",
+            "MOBILIDADE"
+          ],
+          "field": "workshop"
+        },
+        {
+          "id": "E2",
+          "title": "Ordem de chegada",
+          "type": "order",
+          "instruction": "Ordene cada grupo por hora de chegada.",
+          "items": [
+            {
+              "id": "E01",
+              "name": "Alice",
+              "workshop": "RPG",
+              "time": "09:05"
+            },
+            {
+              "id": "E02",
+              "name": "Bento",
+              "workshop": "MOBILIDADE",
+              "time": "09:10"
+            },
+            {
+              "id": "E03",
+              "name": "Clara",
+              "workshop": "RPG",
+              "time": "09:17"
+            },
+            {
+              "id": "E04",
+              "name": "Davi",
+              "workshop": "MOBILIDADE",
+              "time": "09:22"
+            },
+            {
+              "id": "E05",
+              "name": "Eva",
+              "workshop": "RPG",
+              "time": "09:31"
+            },
+            {
+              "id": "E06",
+              "name": "Fábio",
+              "workshop": "MOBILIDADE",
+              "time": "09:40"
+            }
+          ],
+          "groups": [
+            {
+              "name": "RPG",
+              "ids": [
+                "E05",
+                "E03",
+                "E01"
+              ],
+              "expected": [
+                "E01",
+                "E03",
+                "E05"
+              ]
+            },
+            {
+              "name": "MOBILIDADE",
+              "ids": [
+                "E06",
+                "E02",
+                "E04"
+              ],
+              "expected": [
+                "E02",
+                "E04",
+                "E06"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E3",
+          "title": "Conferência das inscrições",
+          "type": "checklist",
+          "instruction": "Confira se faltou alguém. Use os seis cartões e registre sua estratégia de conferência.",
+          "items": [
+            {
+              "id": "E01",
+              "name": "Alice",
+              "workshop": "RPG",
+              "time": "09:05"
+            },
+            {
+              "id": "E02",
+              "name": "Bento",
+              "workshop": "MOBILIDADE",
+              "time": "09:10"
+            },
+            {
+              "id": "E03",
+              "name": "Clara",
+              "workshop": "RPG",
+              "time": "09:17"
+            },
+            {
+              "id": "E04",
+              "name": "Davi",
+              "workshop": "MOBILIDADE",
+              "time": "09:22"
+            },
+            {
+              "id": "E05",
+              "name": "Eva",
+              "workshop": "RPG",
+              "time": "09:31"
+            },
+            {
+              "id": "E06",
+              "name": "Fábio",
+              "workshop": "MOBILIDADE",
+              "time": "09:40"
+            }
+          ],
+          "criterion": "Cotejar os seis cartões, contar itens ou identificar duplicidades. Registrar a estratégia observada; a descrição isolada não comprova transferência."
+        }
+      ]
+    },
+    {
+      "id": "central",
+      "name": "Central de Operações",
+      "description": "Sondagens complementares em uma mesa de operações.",
+      "origin": "Itens novos propostos para a versão digital; exigem revisão profissional.",
+      "stages": [
+        {
+          "id": "K1",
+          "title": "Etiquetas equivalentes",
+          "type": "route",
+          "instruction": "Nesta central, LUMA é o mesmo material que KIT-4. KIT-4 é o conjunto de envelopes. Separe o material solicitado em cada linha.",
+          "rows": [
+            {
+              "id": "K1a",
+              "label": "Solicitação: LUMA",
+              "options": [
+                "Envelopes",
+                "Caixas",
+                "Canetas"
+              ],
+              "expected": "Envelopes"
+            },
+            {
+              "id": "K1b",
+              "label": "A peça TERA também recebe o código P-8. Solicitação: P-8",
+              "options": [
+                "TERA",
+                "LUMA",
+                "KIT-4"
+              ],
+              "expected": "TERA"
+            }
+          ]
+        },
+        {
+          "id": "K2",
+          "title": "Atualização de comandos",
+          "type": "route",
+          "instruction": "Atualize os estados do painel conforme a nova orientação. Cada controle tem somente dois estados.",
+          "rows": [
+            {
+              "id": "K2a",
+              "label": "O equipamento estava LIGADO. A nova orientação é deixá-lo no estado oposto.",
+              "options": [
+                "LIGADO",
+                "DESLIGADO"
+              ],
+              "expected": "DESLIGADO"
+            },
+            {
+              "id": "K2b",
+              "label": "O registro estava INCLUÍDO. A nova orientação é executar a operação oposta.",
+              "options": [
+                "INCLUÍDO",
+                "EXCLUÍDO"
+              ],
+              "expected": "EXCLUÍDO"
+            }
+          ]
+        },
+        {
+          "id": "K3",
+          "title": "Localização de materiais",
+          "type": "position",
+          "instruction": "Posicione os objetos nos três espaços. Não há movimentação de equipamentos reais.",
+          "rows": [
+            {
+              "id": "K3a",
+              "label": "B está no centro; C está à direita de B. Coloque A à esquerda de B.",
+              "expected": "Esquerda"
+            },
+            {
+              "id": "K3b",
+              "label": "X fica à direita de Y. Posicione Y em relação a X.",
+              "expected": "Esquerda"
+            }
+          ],
+          "options": [
+            "Esquerda",
+            "Centro",
+            "Direita"
+          ]
+        },
+        {
+          "id": "K4",
+          "title": "Encaminhamento por perspectiva",
+          "type": "route",
+          "instruction": "Encaminhe cada registro ao local ou à pessoa indicados pelo emissor da mensagem.",
+          "rows": [
+            {
+              "id": "K4a",
+              "label": "Ana está na Mesa 1 e Bruno na Mesa 2. Bruno diz: “Entregue aqui”. Encaminhe o arquivo.",
+              "options": [
+                "Mesa 1",
+                "Mesa 2"
+              ],
+              "expected": "Mesa 2"
+            },
+            {
+              "id": "K4b",
+              "label": "Você representa Ana; o supervisor representa Bruno. Bruno diz: “O arquivo é para você”. Encaminhe o arquivo.",
+              "options": [
+                "Ana",
+                "Bruno"
+              ],
+              "expected": "Ana"
+            }
+          ]
+        },
+        {
+          "id": "K5",
+          "title": "Transferência de organização",
+          "type": "classify",
+          "instruction": "No escritório, separar por assunto facilita localizar documentos. Agora organize estes materiais por tipo para facilitar a localização. Registre como adaptou a estratégia.",
+          "items": [
+            {
+              "id": "M1",
+              "name": "Caneta azul",
+              "kind": "Escrita"
+            },
+            {
+              "id": "M2",
+              "name": "Lápis",
+              "kind": "Escrita"
+            },
+            {
+              "id": "M3",
+              "name": "Pasta",
+              "kind": "Armazenamento"
+            },
+            {
+              "id": "M4",
+              "name": "Caixa",
+              "kind": "Armazenamento"
+            }
+          ],
+          "options": [
+            "Escrita",
+            "Armazenamento"
+          ],
+          "field": "kind",
+          "message": true
+        }
+      ]
+    }
+  ],
+  "matrix": [
+    {
+      "id": "A1-RH",
+      "game": "office",
+      "stage": "A1",
+      "axis": 4,
+      "target": "Classificar todos os documentos do setor RH pelo pertencimento ao grupo.",
+      "expected": "D01, D05, D08, D12",
+      "source": "manual",
+      "verbal": [
+        "R5.1",
+        "R5.2",
+        "R5.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "A1-FINANCEIRO",
+      "game": "office",
+      "stage": "A1",
+      "axis": 4,
+      "target": "Classificar todos os documentos do setor FINANCEIRO pelo pertencimento ao grupo.",
+      "expected": "D02, D04, D07, D10",
+      "source": "manual",
+      "verbal": [
+        "R5.1",
+        "R5.2",
+        "R5.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "A1-OPERAÇÕES",
+      "game": "office",
+      "stage": "A1",
+      "axis": 4,
+      "target": "Classificar todos os documentos do setor OPERAÇÕES pelo pertencimento ao grupo.",
+      "expected": "D03, D06, D09, D11",
+      "source": "manual",
+      "verbal": [
+        "R5.1",
+        "R5.2",
+        "R5.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "A2-RH",
+      "game": "office",
+      "stage": "A2",
+      "axis": 5,
+      "target": "Ordenar os documentos de RH por prazo.",
+      "expected": "D12 → D01 → D08 → D05",
+      "source": "manual",
+      "verbal": [
+        "R6.1",
+        "R6.2",
+        "R6.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "A2-FINANCEIRO",
+      "game": "office",
+      "stage": "A2",
+      "axis": 5,
+      "target": "Ordenar os documentos de FINANCEIRO por prazo.",
+      "expected": "D04 → D07 → D02 → D10",
+      "source": "manual",
+      "verbal": [
+        "R6.1",
+        "R6.2",
+        "R6.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "A2-OPERAÇÕES",
+      "game": "office",
+      "stage": "A2",
+      "axis": 5,
+      "target": "Ordenar os documentos de OPERAÇÕES por prazo.",
+      "expected": "D11 → D06 → D03 → D09",
+      "source": "manual",
+      "verbal": [
+        "R6.1",
+        "R6.2",
+        "R6.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "A3-D01",
+      "game": "office",
+      "stage": "A3",
+      "axis": 8,
+      "target": "Aplicar a condição de prazo urgente ao documento D01.",
+      "expected": "Marcar como urgente.",
+      "source": "manual",
+      "verbal": [
+        "R9.1",
+        "R9.2",
+        "R9.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "A3-D06",
+      "game": "office",
+      "stage": "A3",
+      "axis": 8,
+      "target": "Aplicar a condição de prazo urgente ao documento D06.",
+      "expected": "Marcar como urgente.",
+      "source": "manual",
+      "verbal": [
+        "R9.1",
+        "R9.2",
+        "R9.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "A4-D04",
+      "game": "office",
+      "stage": "A4",
+      "axis": 1,
+      "target": "Distinguir o status PENDENTE e mover D04 para VERIFICAR.",
+      "expected": "VERIFICAR",
+      "source": "manual",
+      "verbal": [
+        "R2.1",
+        "R2.2",
+        "R2.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "A4-D11",
+      "game": "office",
+      "stage": "A4",
+      "axis": 1,
+      "target": "Distinguir o status PENDENTE e mover D11 para VERIFICAR.",
+      "expected": "VERIFICAR",
+      "source": "manual",
+      "verbal": [
+        "R2.1",
+        "R2.2",
+        "R2.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "B2-P101",
+      "game": "stock",
+      "stage": "B2",
+      "axis": 3,
+      "target": "Conferir a quantidade solicitada de P101 frente ao estoque disponível.",
+      "expected": "Separar 3 unidades de P101.",
+      "source": "manual",
+      "verbal": [
+        "R4.1",
+        "R4.2",
+        "R4.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "B2-P203",
+      "game": "stock",
+      "stage": "B2",
+      "axis": 3,
+      "target": "Reconhecer que o estoque de P203 é menor que o pedido.",
+      "expected": "Registrar quantidade insuficiente; não completar a linha sem orientação.",
+      "source": "manual",
+      "verbal": [
+        "R4.1",
+        "R4.2",
+        "R4.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "B2-P305",
+      "game": "stock",
+      "stage": "B2",
+      "axis": 8,
+      "target": "Aplicar a condição que impede separar produto avariado.",
+      "expected": "P305 em IMPEDIMENTO, motivo avariado.",
+      "source": "manual",
+      "verbal": [
+        "R9.1",
+        "R9.2",
+        "R9.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "B2-P408",
+      "game": "stock",
+      "stage": "B2",
+      "axis": 5,
+      "target": "Comparar a validade com a data fixa do cenário.",
+      "expected": "P408 em IMPEDIMENTO, motivo vencido.",
+      "source": "manual",
+      "verbal": [
+        "R6.1",
+        "R6.2",
+        "R6.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "C1",
+      "game": "communication",
+      "stage": "C1",
+      "axis": 8,
+      "target": "Solicitar informação relevante ou verificar hipótese diante de instrução incompleta.",
+      "expected": "Solicitar ao menos uma informação necessária antes de executar, ou explicitar hipótese e verificar sua adequação. Não rotular automaticamente execução espontânea como falha social.",
+      "source": "manual",
+      "verbal": [
+        "R9.1",
+        "R9.2",
+        "R9.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "C2",
+      "game": "communication",
+      "stage": "C2",
+      "axis": 7,
+      "target": "Comunicar informação que o colega ainda não recebeu.",
+      "expected": "Transmitir que terminou e, quando relevante, o que Bruno já pode fazer. Aceitar comunicação alternativa.",
+      "source": "manual",
+      "verbal": [
+        "R8.1",
+        "R8.2",
+        "R8.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "C3",
+      "game": "communication",
+      "stage": "C3",
+      "axis": 8,
+      "target": "Reorganizar a sequência ou negociar esclarecimento diante da nova orientação.",
+      "expected": "Verificar a nova prioridade e indicar uma sequência viável, pedir dados que faltarem ou negociar recurso necessário. Não exigir concordância automática.",
+      "source": "manual",
+      "verbal": [
+        "R9.1",
+        "R9.2",
+        "R9.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "C4",
+      "game": "communication",
+      "stage": "C4",
+      "axis": null,
+      "target": "Comunicação funcional na entrevista; registro qualitativo, sem eixo único.",
+      "expected": "Respostas pertinentes ao conteúdo. Não avaliar contato visual, carisma, tom de voz ou supressão de movimentos autorregulatórios.",
+      "source": "manual",
+      "verbal": [
+        "R1.1",
+        "R1.2",
+        "R1.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "E1",
+      "game": "events",
+      "stage": "E1",
+      "axis": 9,
+      "target": "Observar transferência da estratégia de classificação para inscrições em outro contexto.",
+      "expected": "RPG: E01/E03/E05; MOBILIDADE: E02/E04/E06. O avaliador deve verificar o histórico de exposição e a estratégia efetivamente utilizada.",
+      "source": "manual",
+      "verbal": [
+        "R10.1",
+        "R10.2",
+        "R10.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "E2",
+      "game": "events",
+      "stage": "E2",
+      "axis": 5,
+      "target": "Ordenar inscrições pela hora de chegada.",
+      "expected": "RPG: E01 → E03 → E05; MOBILIDADE: E02 → E04 → E06.",
+      "source": "manual",
+      "verbal": [
+        "R6.1",
+        "R6.2",
+        "R6.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "E3",
+      "game": "events",
+      "stage": "E3",
+      "axis": 9,
+      "target": "Observar transferência de uma estratégia de conferência na ação de verificar as inscrições.",
+      "expected": "Conferir os seis registros e demonstrar estratégia funcional. Descrever o contexto; não inferir generalização ampla.",
+      "source": "manual",
+      "verbal": [
+        "R10.1",
+        "R10.2",
+        "R10.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "K1a",
+      "game": "central",
+      "stage": "K1",
+      "axis": 0,
+      "target": "Solicitação: LUMA",
+      "expected": "Envelopes",
+      "source": "novo",
+      "verbal": [
+        "R1.1",
+        "R1.2",
+        "R1.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "K1b",
+      "game": "central",
+      "stage": "K1",
+      "axis": 0,
+      "target": "A peça TERA também recebe o código P-8. Solicitação: P-8",
+      "expected": "TERA",
+      "source": "novo",
+      "verbal": [
+        "R1.1",
+        "R1.2",
+        "R1.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "K2a",
+      "game": "central",
+      "stage": "K2",
+      "axis": 2,
+      "target": "O equipamento estava LIGADO. A nova orientação é deixá-lo no estado oposto.",
+      "expected": "DESLIGADO",
+      "source": "novo",
+      "verbal": [
+        "R3.1",
+        "R3.2",
+        "R3.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "K2b",
+      "game": "central",
+      "stage": "K2",
+      "axis": 2,
+      "target": "O registro estava INCLUÍDO. A nova orientação é executar a operação oposta.",
+      "expected": "EXCLUÍDO",
+      "source": "novo",
+      "verbal": [
+        "R3.1",
+        "R3.2",
+        "R3.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "K3a",
+      "game": "central",
+      "stage": "K3",
+      "axis": 6,
+      "target": "B está no centro; C está à direita de B. Coloque A à esquerda de B.",
+      "expected": "Esquerda",
+      "source": "novo",
+      "verbal": [
+        "R7.1",
+        "R7.2",
+        "R7.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "K3b",
+      "game": "central",
+      "stage": "K3",
+      "axis": 6,
+      "target": "X fica à direita de Y. Posicione Y em relação a X.",
+      "expected": "Esquerda",
+      "source": "novo",
+      "verbal": [
+        "R7.1",
+        "R7.2",
+        "R7.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "K4a",
+      "game": "central",
+      "stage": "K4",
+      "axis": 7,
+      "target": "Ana está na Mesa 1 e Bruno na Mesa 2. Bruno diz: “Entregue aqui”. Encaminhe o arquivo.",
+      "expected": "Mesa 2",
+      "source": "novo",
+      "verbal": [
+        "R8.1",
+        "R8.2",
+        "R8.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "K4b",
+      "game": "central",
+      "stage": "K4",
+      "axis": 7,
+      "target": "Você representa Ana; o supervisor representa Bruno. Bruno diz: “O arquivo é para você”. Encaminhe o arquivo.",
+      "expected": "Ana",
+      "source": "novo",
+      "verbal": [
+        "R8.1",
+        "R8.2",
+        "R8.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    },
+    {
+      "id": "K5",
+      "game": "central",
+      "stage": "K5",
+      "axis": 9,
+      "target": "Transferir o princípio de agrupamento para localizar materiais.",
+      "expected": "M1/M2 em Escrita; M3/M4 em Armazenamento. Registrar estratégia e familiaridade.",
+      "source": "novo",
+      "verbal": [
+        "R10.1",
+        "R10.2",
+        "R10.3"
+      ],
+      "mappingStatus": "Proposta digital para revisão"
+    }
+  ]
+}

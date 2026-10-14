@@ -1,0 +1,176 @@
+﻿LADO A — CADERNO DE MATERIAIS
+Avaliação de Empregabilidade • Cartões, instruções e fichas sem gabarito • Versão piloto 1.0
+Material de aplicação para recortar, apresentar ou preencher. O gabarito e os critérios de registro estão exclusivamente no Manual de Aplicação. Não entregar o manual com respostas ao participante.
+A. Identificação e preparação
+Participante: __________________________________ Data: ______________
+Profissional: __________________________________ Sessão: _____________
+Comunicação preferida: ____________________ Adaptações disponibilizadas: __________________________
+Data fictícia adotada para as atividades A e B: HOJE = 15/06/2027.
+Recortar os cartões nas linhas indicadas. Os rótulos de D01–D12 são cartões da tarefa administrativa; P101–P410 são cartões de estoque. Para os cartões de estoque, unidades físicas podem ser simuladas por fichas de papel.
+B. Cartões da Atividade A — Documentos
+RECORTE CADA BLOCO PARA FORMAR UM CARTÃO. Todos os prazos e setores pertencem a uma empresa fictícia.
+D01 — CURRÍCULO
+Setor: RH | Prazo: 16/06/2027 | Status: COMPLETO
+✂ ─────────────────────────────────────────────────────
+D02 — NOTA FISCAL
+Setor: FINANCEIRO | Prazo: 20/06/2027 | Status: COMPLETO
+✂ ─────────────────────────────────────────────────────
+D03 — FORMULÁRIO DE ESTOQUE
+Setor: OPERAÇÕES | Prazo: 18/06/2027 | Status: COMPLETO
+✂ ─────────────────────────────────────────────────────
+D04 — REEMBOLSO
+Setor: FINANCEIRO | Prazo: 14/06/2027 | Status: PENDENTE
+✂ ─────────────────────────────────────────────────────
+D05 — PLANO DE TREINAMENTO
+Setor: RH | Prazo: 22/06/2027 | Status: COMPLETO
+✂ ─────────────────────────────────────────────────────
+D06 — ORDEM DE COMPRA
+Setor: OPERAÇÕES | Prazo: 17/06/2027 | Status: COMPLETO
+✂ ─────────────────────────────────────────────────────
+D07 — RECIBO
+Setor: FINANCEIRO | Prazo: 16/06/2027 | Status: COMPLETO
+✂ ─────────────────────────────────────────────────────
+D08 — ESCALA DE EQUIPE
+Setor: RH | Prazo: 19/06/2027 | Status: COMPLETO
+✂ ─────────────────────────────────────────────────────
+D09 — PLANO DE MANUTENÇÃO
+Setor: OPERAÇÕES | Prazo: 21/06/2027 | Status: COMPLETO
+✂ ─────────────────────────────────────────────────────
+D10 — AVISO DE COBRANÇA
+Setor: FINANCEIRO | Prazo: 23/06/2027 | Status: COMPLETO
+✂ ─────────────────────────────────────────────────────
+D11 — LISTA DE INVENTÁRIO
+Setor: OPERAÇÕES | Prazo: 15/06/2027 | Status: PENDENTE
+✂ ─────────────────────────────────────────────────────
+D12 — SOLICITAÇÃO DE FÉRIAS
+Setor: RH | Prazo: 14/06/2027 | Status: COMPLETO
+✂ ─────────────────────────────────────────────────────
+Etiquetas para os recipientes A
+RH
+FINANCEIRO
+OPERAÇÕES
+URGENTE
+VERIFICAR
+C. Cartões da Atividade B — Produtos de estoque
+Recortar dez cartões de produto. “Sem validade” significa que não há data de vencimento a verificar neste exercício. Cartões representam disponibilidade em estoque, não itens a serem realmente consumidos ou manipulados.
+P101 — PASTA AZUL
+Estoque: 5 unidades | Estado: ÍNTEGRO | Validade: não se aplica
+✂ ─────────────────────────────────────────────────────
+P102 — PASTA VERDE
+Estoque: 4 unidades | Estado: ÍNTEGRO | Validade: não se aplica
+✂ ─────────────────────────────────────────────────────
+P203 — CAIXA PEQUENA
+Estoque: 1 unidade | Estado: ÍNTEGRO | Validade: não se aplica
+✂ ─────────────────────────────────────────────────────
+P204 — CAIXA MÉDIA
+Estoque: 5 unidades | Estado: ÍNTEGRO | Validade: não se aplica
+✂ ─────────────────────────────────────────────────────
+P305 — CANETA AZUL
+Estoque: 3 unidades | Estado: AVARIADO | Validade: não se aplica
+✂ ─────────────────────────────────────────────────────
+P306 — CANETA PRETA
+Estoque: 6 unidades | Estado: ÍNTEGRO | Validade: não se aplica
+✂ ─────────────────────────────────────────────────────
+P407 — FITA ADESIVA
+Estoque: 3 unidades | Estado: ÍNTEGRO | Validade: não se aplica
+✂ ─────────────────────────────────────────────────────
+P408 — ETIQUETA TÉRMICA
+Estoque: 10 unidades | Estado: ÍNTEGRO | Validade: 10/06/2027
+✂ ─────────────────────────────────────────────────────
+P409 — ENVELOPE
+Estoque: 5 unidades | Estado: ÍNTEGRO | Validade: não se aplica
+✂ ─────────────────────────────────────────────────────
+P410 — CLIPE
+Estoque: 12 unidades | Estado: ÍNTEGRO | Validade: não se aplica
+✂ ─────────────────────────────────────────────────────
+Pedido O-17 — Separação de material
+Data simulada de hoje: 15/06/2027. Separe apenas os itens que cumprem as regras impressas abaixo. Se uma linha não puder ser atendida, registre o motivo para o responsável.
+P101 | Pasta azul | quantidade solicitada: 3
+P203 | Caixa pequena | quantidade solicitada: 2
+P305 | Caneta azul | quantidade solicitada: 1
+P408 | Etiqueta térmica | quantidade solicitada: 2
+P407 | Fita adesiva | quantidade solicitada: 1
+Regras do pedido O-17
+1. Usar somente o código idêntico ao solicitado.
+2. Separar a quantidade exata. Não substituir produto sem autorização.
+3. Não separar item com estado AVARIADO.
+4. Não separar item cuja validade seja anterior a 15/06/2027.
+5. Quando a quantidade disponível for insuficiente, registrar a divergência e pedir orientação.
+Etiquetas dos recipientes B
+SEPARAR
+IMPEDIMENTO
+CONFERIDO
+Folha de conferência do Pedido O-17
+Código | Quantidade solicitada | Quantidade separada | Situação/impedimento | Ação ou pergunta ao responsável
+P101   | __________ | __________ | __________________________ | __________________________
+P203   | __________ | __________ | __________________________ | __________________________
+P305   | __________ | __________ | __________________________ | __________________________
+P408   | __________ | __________ | __________________________ | __________________________
+P407   | __________ | __________ | __________________________ | __________________________
+Mensagem/resumo ao supervisor: _______________________________________________________________
+D. Cartões da Atividade D — Inscrições para evento (opcional)
+Organize as inscrições conforme as orientações do aplicador. Esses cartões são de um contexto diferente das atividades A e B.
+E01 — INSCRIÇÃO
+Participante: Alice | Oficina: RPG | Hora de chegada: 09:05
+✂ ─────────────────────────────────────────────────────
+E02 — INSCRIÇÃO
+Participante: Bento | Oficina: MOBILIDADE | Hora de chegada: 09:10
+✂ ─────────────────────────────────────────────────────
+E03 — INSCRIÇÃO
+Participante: Clara | Oficina: RPG | Hora de chegada: 09:17
+✂ ─────────────────────────────────────────────────────
+E04 — INSCRIÇÃO
+Participante: Davi | Oficina: MOBILIDADE | Hora de chegada: 09:22
+✂ ─────────────────────────────────────────────────────
+E05 — INSCRIÇÃO
+Participante: Eva | Oficina: RPG | Hora de chegada: 09:31
+✂ ─────────────────────────────────────────────────────
+E06 — INSCRIÇÃO
+Participante: Fábio | Oficina: MOBILIDADE | Hora de chegada: 09:40
+✂ ─────────────────────────────────────────────────────
+Etiqueta para os recipientes D
+RPG
+MOBILIDADE
+E. Folhas de resposta e observação
+E1 — Registro do participante (preferências)
+1. Atividades que eu gostaria de experimentar: _____________________________________________________
+2. Atividades que já faço com facilidade em algumas condições: ________________________________________
+3. O que me ajuda a aprender: __________________________________________________________________
+4. Como eu prefiro receber orientações: __________________________________________________________
+5. O que pode dificultar o trabalho: ______________________________________________________________
+6. O que eu gostaria que a equipe soubesse sobre mim: ______________________________________________
+E2 — Registro do aplicador: sondagens RFT
+Cada linha: código | resposta observada | I/AP/N/NO | apoio usado | observação/contexto.
+R1.1 _________ R1.2 _________ R1.3 _________ | comentário: ________________________________________
+R2.1 _________ R2.2 _________ R2.3 _________ | comentário: ________________________________________
+R3.1 _________ R3.2 _________ R3.3 _________ | comentário: ________________________________________
+R4.1 _________ R4.2 _________ R4.3 _________ | comentário: ________________________________________
+R5.1 _________ R5.2 _________ R5.3 _________ | comentário: ________________________________________
+R6.1 _________ R6.2 _________ R6.3 _________ | comentário: ________________________________________
+R7.1 _________ R7.2 _________ R7.3 _________ | comentário: ________________________________________
+R8.1 _________ R8.2 _________ R8.3 _________ | comentário: ________________________________________
+R9.1 _________ R9.2 _________ R9.3 _________ | comentário: ________________________________________
+R10.1 ________ R10.2 ________ R10.3 ________ | comentário: ________________________________________
+Código de registro: I = independente | AP = com apoio | N = critério não demonstrado | NO = não observado. Registrar resposta e auxílio para não confundir resultados.
+E3 — Registro de tarefa A
+A1: setor correto ____ /12. A2: grupos ordenados ____ /3; cartões na posição ____ /12.
+A3: urgentes ____ /6, demais ____ /6. A4: pendências separadas ____ /2.
+Ajudas/acessibilidade: __________________________ Comunicação funcional: __________________________
+Observações: ________________________________________________________________________________
+E4 — Registro de tarefa B
+Códigos corretos ____ /5. Quantidades aptas ____ /2. Impedimentos identificados ____ /3.
+Relato de pendências: _______________________ Substituição sem autorização? ________________________
+Resposta à orientação alterada: __________________________________________________________________
+Ajudas/acessibilidade: ________________________ Observações: _____________________________________
+E5 — Registro de tarefa C
+C1 (lacuna de instrução): _______________________ C2 (informação ao colega): ________________________
+C3 (feedback/mudança): ________________________ C4 (entrevista, perguntas pertinentes ____ /4): ______
+Perguntas que o participante formulou: _________________________________________________________
+Modos de comunicação e apoios: _____________________________________________________________
+E6 — Registro integrado de facilidades e preferências
+Repertórios observados sem apoio: ______________________________________________________________
+Repertórios que apareceram com auxílio: ________________________________________________________
+Condições ambientais facilitadoras: ____________________________________________________________
+Preferências e escolhas expressas: _____________________________________________________________
+Situações para experimentar em ambiente real: ___________________________________________________
+Observações e próximos passos escolhidos: _____________________________________________________
