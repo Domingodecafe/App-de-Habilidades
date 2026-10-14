@@ -32,21 +32,21 @@ export async function createAssessmentPDF(assessment,content,docs){
     for(const [rows,key,color] of [[interview,'interview',rgb(.1,.14,.5)],[office,'value',green]])rows.forEach((r,i)=>{if(r[key]===null)return;const p=pos(i,r[key]),next=rows[(i+1)%5][key];if(next!==null)page.drawLine({start:p,end:pos((i+1)%5,next),color,thickness:2});page.drawCircle({x:p.x,y:p.y,size:3,color});});
     y=310;line('Escala descritiva: 0 a 100. Eixos sem classificação não recebem zero.',{size:9});
     DISCOVERY_DOMAINS.forEach((name,i)=>{line(name,{heading:true});line(`Discovery: ${interview[i].interview===null?'dados insuficientes':interview[i].interview+' / 100'} (${interview[i].count} classificações) | Office: ${office[i].value===null?'dados insuficientes':office[i].value+' / 100'} (${office[i].count} confirmadas)`,{size:9});});
-    line('Se o teste foi preenchido sem avaliador, a classificação poderá ser feita após o recebimento deste arquivo.',{size:9,color:gray});
+    line(assessment.assisted?'Aplicação acompanhada. Eixos sem cobertura suficiente permanecem sem valor.':'Classificações pendentes podem ser revisadas pelo avaliador após o recebimento deste arquivo.',{size:9,color:gray});
   }
   addPage();title('Respostas e evidências do teste externo');
   line(`Participante: ${assessment.identity.code||'Não informado'}`,{heading:true,size:12});
-  line(`ID da avaliação: ${assessment.id}`);line(`Data: ${assessment.identity.date} | Comunicação: ${assessment.identity.communication||'Não informada'}`);
+  line(`Avaliador responsável: ${assessment.identity.professional||'Não informado'}`);if(assessment.assisted)line(`Aplicação acompanhada: ${assessment.assisted.completedAt?'revisão concluída em '+new Date(assessment.assisted.completedAt).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'}):'revisão pendente'}`);line(`ID da avaliação: ${assessment.id}`);line(`Data: ${assessment.identity.date} | Comunicação: ${assessment.identity.communication||'Não informada'}`);
   line(`Office: ${assessment.office?.status==='completed'?'concluído':assessment.office?'em andamento':'não iniciado'}`);
   line('Este PDF contém as respostas e uma cópia integral dos dados em anexo. O envio pelo WhatsApp é manual.');
   line('Os dados ficam no dispositivo de quem respondeu; não são enviados automaticamente para um servidor.');
   line('Para o avaliador: importe este PDF em Mais ações > Importar avaliação para revisar as evidências.');
   radar();addPage();
   title('Entrevista Discovery - respostas');
-  for(const q of discoveryQuestions(content)){const record=assessment.integrated.records[q.id];title(`${q.id} - ${q.text}`);line(record?.answer||'Sem resposta registrada.');if(record?.score!==null&&record?.score!==undefined)line(`Classificação: ${record.score}/2`);}
+  for(const q of discoveryQuestions(content)){const record=assessment.integrated.records[q.id];title(`${q.id} - ${q.text}`);line(record?.answer||'Sem resposta registrada.');if(record?.reason)line('Motivo de não classificação: '+record.reason);if(record?.help)line('Ajuda: '+record.help);if(record?.access)line('Acessibilidade: '+record.access);if(record?.notes)line('Observações: '+record.notes);if(record?.score!==null&&record?.score!==undefined)line(`Classificação: ${record.score}/2`);}
   if(assessment.office){
     title('Escritório Digital - registros preservados');line(`Protocolo Office ${assessment.office.version}. ${assessment.office.adaptation}`);
-    for(const stage of assessment.office.stages){title(`Etapa ${stage.step}`);line(`Início: ${stage.startedAt} | Conclusão: ${stage.completedAt||'não concluída'}`);
+    for(const stage of assessment.office.stages){title(`Etapa ${stage.step}`);const observation=assessment.assisted?.officeObservations[stage.step];if(observation){line('Apoios e observações do avaliador:',{heading:true});line(JSON.stringify(observation,null,2),{size:9});}line(`Início: ${stage.startedAt} | Conclusão: ${stage.completedAt||'não concluída'}`);
       for(const [label,snapshot] of [['Primeira entrega',stage.first],['Entrega final',stage.final]]){line(label,{heading:true});line(snapshot?JSON.stringify(snapshot.response,null,2):'Não registrada.',{size:9});}
     }
     title('Ajuda, pausas e histórico das ações');

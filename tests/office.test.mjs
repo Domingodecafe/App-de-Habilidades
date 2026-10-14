@@ -14,7 +14,7 @@ test('documentos originais preservados e setor não aparece nos cartões Office'
   assert.deepEqual(material.docs.map(d=>d.id),DOCUMENT_IDS);
   for(const d of material.docs){assert.ok(materials.includes(`${d.id} — ${d.name.toUpperCase()}`));assert.ok(materials.includes(`Setor: ${d.sector} | Prazo: ${d.date} | Status: ${d.status}`));}
   const html=officeView({office:make()},material.docs);
-  for(const d of material.docs){const card=html.match(new RegExp(`<article[^>]*data-document="${d.id}"[\\s\\S]*?</article>`))[0];assert.ok(!card.includes('Setor:'));assert.ok(!card.includes('data-sector'));assert.ok(!card.includes('selected>RH'));assert.ok(card.includes('value="RECEBIDOS" selected'));}
+  for(const d of material.docs){const card=html.match(new RegExp(`<article[^>]*data-document="${d.id}"[\\s\\S]*?</article>`))[0];assert.ok(!card.includes('Setor:'));assert.ok(!card.includes('data-sector'));assert.ok(!card.includes('selected>RH'));assert.ok(card.includes('value="" selected disabled>Escolher destino'));}
 });
 test('primeira entrega imutável; revisões, destino, posições e final registrados',()=>{
   const s=make();applyOffice(s,'move',{document:'D01',destination:'FINANCEIRO'});applyOffice(s,'first');const first=structuredClone(officeStage(s).first);

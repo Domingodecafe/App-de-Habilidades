@@ -2,32 +2,60 @@ import {escapeHTML as esc} from './core.js';
 import {blankRecord} from './integrated.js';
 import {createOffice,applyOffice} from './office.js';
 import {officeView} from './office-view.js';
-export function externalTestView(a,qs,docs,status=''){
-  a.external ||= {version:1,phase:'welcome',questionIndex:0};const flow=a.external;
-  if(flow.phase==='office')return officeView(a,docs,status);
-  const header='<div class="external-brand"><img src="assets/lado-a-logo.svg" alt="LADO A"><span>LADO A | Employability<br><small>Primeiro teste externo</small></span></div>';
-  let body;
-  if(flow.phase==='welcome')body=`<h1>Conhecer suas experiências</h1><p>Você responderá à entrevista Discovery e realizará uma atividade de organização de documentos. Pode pedir ajuda e fazer pausas.</p><p>As respostas ficam neste dispositivo. Ao terminar, baixe o PDF com as respostas e o radar e envie manualmente pelo WhatsApp à pessoa que encaminhou este link. As notas dependem de revisão do avaliador.</p><label class="field">Nome ou código de identificação<input data-external-field="code" value="${esc(a.identity.code)}" autocomplete="off"></label><label class="field">Forma de comunicação preferida<input data-external-field="communication" value="${esc(a.identity.communication)}"></label><label class="check"><input type="checkbox" data-external-field="agreement" ${a.identity.agreement?'checked':''}>Entendi a atividade e concordo em participar e compartilhar o PDF manualmente.</label><button class="primary" data-external-action="start">Iniciar entrevista →</button>`;
-  else if(flow.phase==='discovery'){
-    const q=qs[flow.questionIndex],r=a.integrated.records[q.id]||blankRecord();
-    body=`<span class="badge">Discovery · pergunta ${flow.questionIndex+1} de ${qs.length}</span><progress max="${qs.length}" value="${flow.questionIndex}"></progress><h1>${esc(q.text)}</h1>${q.follow?`<p>${esc(q.follow)}</p>`:''}<label class="field">Sua resposta<textarea data-external-answer rows="6">${esc(r.answer)}</textarea></label><p class="muted">Você pode deixar uma pergunta sem resposta. As respostas anteriores podem ser revisadas usando “Anterior”.</p><div class="actions"><button data-external-action="previous" ${flow.questionIndex===0?'disabled':''}>← Anterior</button><button class="primary" data-external-action="next">${flow.questionIndex===qs.length-1?'Continuar para o Office →':'Próxima →'}</button></div>`;
-  }else if(flow.phase==='done')body=`<span class="badge">Atividade concluída</span><h1>Suas respostas foram registradas</h1><p>Baixe o PDF e confira o arquivo na pasta de downloads ou na visualização de arquivos do seu dispositivo. Depois, envie-o manualmente pelo WhatsApp.</p><p>O PDF inclui o radar. Se ainda não houve revisão do avaliador, os eixos estarão identificados como dados insuficientes.</p><button class="primary" data-external-action="pdf">Baixar PDF com respostas e radar</button><p id="external-pdf-status" role="status"></p>`;
-  else body=`<h1>Escritório Digital</h1><p>A próxima atividade tem cinco etapas. Leia as instruções, organize os documentos e registre suas respostas. Você pode pausar e retomar.</p><button class="primary" data-external-action="office">${a.office?'Retomar':'Iniciar'} Escritório Digital →</button>`;
-  return `<main class="external-test">${header}<section class="card">${body}</section><p id="save-status" class="status" role="status">${esc(status||'Salvamento neste dispositivo')}</p><p class="muted">LADO A · Teste de experiência de uso · ${esc(a.identity.code)}</p></main>`;
+import {officeReviewView} from './office-evaluation-view.js';
+import {ensureAccompanied,invalidateDiscoveryDecision,discoveryDecided,confirmDiscoveryDecision,prepareOfficeReview,accompaniedCompletion} from './accompanied.js';
+const select=(id,key,label,value,options)=>`<label class="field">${label}<select data-assisted-id="${id}" data-assisted-key="${key}">${options.map(([v,t])=>`<option value="${v}" ${String(value??'')===String(v)?'selected':''}>${t}</option>`).join('')}</select></label>`;
+const text=(id,key,label,value)=>`<label class="field">${label}<textarea data-assisted-id="${id}" data-assisted-key="${key}" rows="2">${esc(value)}</textarea></label>`;
+function discoveryPanel(a,q,review=false){
+ const r=a.integrated.records[q.id]||blankRecord(),decided=discoveryDecided(a,q.id);
+ return `<details class="assisted-panel" data-assisted-panel="${q.id}"><summary>Painel do avaliador${review?` · ${q.id}`:''}</summary><p>Uso do avaliador. Mantenha os critérios recolhidos durante a resposta do participante.</p>${review?`<h3>${esc(q.text)}</h3><label class="field">Resposta preservada / revisão<textarea data-assisted-answer="${q.id}">${esc(r.answer)}</textarea></label>`:''}${q.domain===null?'<p>Pergunta descritiva: não recebe nota.</p>':`<ol>${q.criteria.map(c=>`<li>${esc(c)}</li>`).join('')}</ol><p>0: nenhum componente; 1: parte; 2: todos. Ausência de evidência permanece sem nota.</p>${select(q.id,'score','Nota',r.score,[['','Sem nota'],[0,'0'],[1,'1'],[2,'2']])}${text(q.id,'reason','Motivo de ausência de classificação',r.reason)}${select(q.id,'independence','Autonomia',r.independence,[['unknown','Não informada'],['independent','Independente'],['assisted','Com ajuda']])}${text(q.id,'help','Ajuda recebida',r.help)}${text(q.id,'access','Acessibilidade e condições',r.access)}`}${text(q.id,'notes','Observações',r.notes)}${q.domain!==null?`<div class="actions"><button data-external-action="classify" data-question="${q.id}">Confirmar classificação</button><button data-external-action="unobserved" data-question="${q.id}">Registrar sem classificação</button></div><p id="discovery-decision-${q.id}" role="status">${decided?'Decisão registrada.':'Decisão pendente.'}</p>`:''}</details>`;
 }
-export function bindExternalTest(root,{getAssessment,getQuestions,isActive,save,render,onPDF,notify}){
-  root.addEventListener('input',e=>{
-    if(!isActive())return;const a=getAssessment(),el=e.target;
-    if(el.dataset.externalField){a.identity[el.dataset.externalField]=el.type==='checkbox'?el.checked:el.value;save();}
-    if(el.hasAttribute('data-external-answer')){const q=getQuestions()[a.external.questionIndex],r=a.integrated.records[q.id] ||= blankRecord();r.answer=el.value;r.score=null;save();}
-  });
-  root.addEventListener('click',e=>{
-    if(!isActive())return;const el=e.target.closest('[data-external-action]');if(!el)return;const a=getAssessment(),flow=a.external,action=el.dataset.externalAction;
-    if(action==='pdf'){onPDF();return;}
-    if(action==='start'){if(!a.identity.code.trim()||!a.identity.agreement){notify('Preencha sua identificação e confirme sua participação para iniciar.');return;}flow.phase='discovery';}
-    if(action==='previous')flow.questionIndex=Math.max(0,flow.questionIndex-1);
-    if(action==='next'){if(flow.questionIndex===getQuestions().length-1)flow.phase='office-ready';else flow.questionIndex++;}
-    if(action==='office'){a.office ||=createOffice(a.id);if(a.office.status==='paused')applyOffice(a.office,'resume');flow.phase=a.office.status==='completed'?'done':'office';}
-    save();render();scrollTo(0,0);
-  });
+function officePanel(a){
+ const step=a.office.currentStage,obs=a.assisted.officeObservations[step]||{support:'',access:'',notes:'',autonomy:'unknown'};
+ return `<details class="assisted-panel" data-assisted-panel="office"><summary>Painel do avaliador</summary><p>Etapa ${step}: registre os apoios e as observações. As notas serão revisadas após o jogo.</p>${select('office','autonomy','Autonomia observada',obs.autonomy,[['unknown','Não informada'],['independent','Independente'],['assisted','Com ajuda']])}${text('office','support','Apoio recebido - tipo, momento e efeito',obs.support)}${text('office','access','Recursos de acessibilidade',obs.access)}${text('office','notes','Observações desta etapa',obs.notes)}</details>`;
+}
+export function externalTestView(a,qs,docs,status=''){
+ ensureAccompanied(a);const flow=a.external;if(flow.phase==='done'&&!accompaniedCompletion(a,qs,docs).ready)flow.phase='review';
+ if(flow.phase==='office')return officeView(a,docs,status,officePanel(a));
+ const header='<div class="external-brand"><img src="assets/lado-a-logo.svg" alt="LADO A"><span>LADO A | Employability<br><small>Aplicação acompanhada pelo avaliador</small></span></div>';
+ let body;
+ if(flow.phase==='welcome')body=`<h1>Conhecer suas experiências</h1><p>Esta avaliação será realizada com um avaliador acompanhando toda a aplicação, no mesmo dispositivo. Você responderá à entrevista Discovery e realizará uma atividade de organização de documentos.</p><p>Pode pedir ajuda e fazer pausas. Ao terminar, o avaliador revisará as evidências. Depois será gerado o PDF com respostas e radar para envio manual pelo WhatsApp.</p><label class="field">Nome ou código do participante<input data-external-field="code" value="${esc(a.identity.code)}"></label><label class="field">Avaliador responsável<input data-external-field="professional" value="${esc(a.identity.professional)}"></label><label class="field">Forma de comunicação preferida<input data-external-field="communication" value="${esc(a.identity.communication)}"></label><label class="check"><input type="checkbox" data-external-field="agreement" ${a.identity.agreement?'checked':''}>Entendi a atividade acompanhada e concordo em participar e compartilhar o PDF manualmente.</label><button class="primary" data-external-action="start">Iniciar entrevista →</button>`;
+ else if(flow.phase==='discovery'){
+  const q=qs[flow.questionIndex],r=a.integrated.records[q.id]||blankRecord();
+  body=`<div class="external-discovery-layout"><div><span class="badge">Discovery · pergunta ${flow.questionIndex+1} de ${qs.length}</span><progress max="${qs.length}" value="${flow.questionIndex}"></progress><h1>${esc(q.text)}</h1>${q.follow?`<p>${esc(q.follow)}</p>`:''}<label class="field">Resposta do participante<textarea data-external-answer rows="6">${esc(r.answer)}</textarea></label><p class="muted">O avaliador registra a classificação ou o motivo de ausência de evidência nas perguntas de habilidade.</p><div class="actions"><button data-external-action="previous" ${flow.questionIndex===0?'disabled':''}>← Anterior</button><button class="primary" data-external-action="next">${flow.questionIndex===qs.length-1?'Continuar para o Office →':'Próxima →'}</button></div></div><aside>${discoveryPanel(a,q)}</aside></div>`;
+ }else if(flow.phase==='review'||flow.phase==='done'&&!accompaniedCompletion(a,qs,docs).ready){
+  prepareOfficeReview(a,docs);const result=accompaniedCompletion(a,qs,docs);
+  body=`<h1>Revisão final com o avaliador</h1><p>A atividade do participante terminou. Registre as decisões profissionais antes de concluir a avaliação.</p><label class="field">Avaliador responsável<input data-external-field="professional" value="${esc(a.identity.professional)}"></label><details class="assisted-review-discovery"><summary>Revisar decisões Discovery · ${result.missingDiscovery.length} pendentes</summary>${qs.filter(q=>q.domain!==null).map(q=>discoveryPanel(a,q,true)).join('')}</details>${a.office?.status==='completed'?`<details class="assisted-panel" data-assisted-panel="office-review"><summary>Painel do avaliador · revisão Office</summary>${officeReviewView(a,docs,{embedded:true})}</details>`:'<p>Conclua o Office antes da revisão final.</p>'}<div class="assisted-final"><p id="assisted-pending" role="status">${result.ready?'Todas as decisões foram registradas.':`${result.missingDiscovery.length} decisões Discovery e ${result.missingOffice.length} oportunidades Office pendentes.${!a.identity.professional.trim()?' Identifique o avaliador.':''}`}</p><button class="primary" data-external-action="finish" ${result.ready?'':'disabled'}>Concluir avaliação e baixar PDF</button><p id="external-pdf-status" role="status"></p></div>`;
+ }else if(flow.phase==='done')body=`<span class="badge">Avaliação concluída</span><h1>Respostas e revisão registradas</h1><p>Baixe o PDF e confira o arquivo no seu dispositivo. Depois, envie-o manualmente pelo WhatsApp.</p><p>O PDF inclui as decisões do avaliador e o radar. Eixos sem duas evidências classificadas permanecem com dados insuficientes.</p><button class="primary" data-external-action="pdf">Baixar novamente PDF com respostas e radar</button><button data-external-action="review">Consultar ou revisar decisões</button><p id="external-pdf-status" role="status"></p>`;
+ else body=`<h1>Escritório Digital</h1><p>A atividade tem cinco etapas. O avaliador acompanha, registra apoios e revisa as evidências após o jogo.</p><button class="primary" data-external-action="office">${a.office?'Retomar':'Iniciar'} Escritório Digital →</button>`;
+ return `<main class="external-test ${flow.phase==='discovery'?'external-wide':''}">${header}<section class="card">${body}</section><p id="save-status" class="status" role="status">${esc(status||'Salvamento neste dispositivo')}</p><p class="muted">LADO A · Aplicação acompanhada · ${esc(a.identity.code)}</p></main>`;
+}
+export function bindExternalTest(root,{getAssessment,getQuestions,getDocs,isActive,save,render,onPDF,notify}){
+ function updateReadiness(){const el=root.querySelector('[data-external-action="finish"]');if(!el)return;const state=accompaniedCompletion(getAssessment(),getQuestions(),getDocs());el.disabled=!state.ready;root.querySelector('#assisted-pending').textContent=state.ready?'Todas as decisões foram registradas.':`${state.missingDiscovery.length} decisões Discovery e ${state.missingOffice.length} oportunidades Office pendentes.`;}
+ function field(e){
+  if(!isActive())return;const a=getAssessment(),el=e.target;ensureAccompanied(a);
+  if(el.dataset.externalField){a.identity[el.dataset.externalField]=el.type==='checkbox'?el.checked:el.value;save();updateReadiness();}
+  const answerId=el.dataset.assistedAnswer|| (el.hasAttribute('data-external-answer')?getQuestions()[a.external.questionIndex].id:null);
+  if(answerId){const r=a.integrated.records[answerId] ||=blankRecord();r.answer=el.value;r.score=null;r.reason='';invalidateDiscoveryDecision(a,answerId);const score=root.querySelector(`[data-assisted-id="${answerId}"][data-assisted-key="score"]`);if(score)score.value='';const reason=root.querySelector(`[data-assisted-id="${answerId}"][data-assisted-key="reason"]`);if(reason)reason.value='';const status=root.querySelector(`#discovery-decision-${answerId}`);if(status)status.textContent='Resposta alterada: confirme novamente a decisão.';save();updateReadiness();}
+  if(el.dataset.assistedKey){const id=el.dataset.assistedId,key=el.dataset.assistedKey;
+   if(id==='office'){const step=a.office.currentStage,obs=a.assisted.officeObservations[step] ||= {support:'',access:'',notes:'',autonomy:'unknown'};obs[key]=el.value;}
+   else{const r=a.integrated.records[id] ||=blankRecord();r[key]=key==='score'?(el.value===''?null:Number(el.value)):el.value;invalidateDiscoveryDecision(a,id);const status=root.querySelector(`#discovery-decision-${id}`);if(status)status.textContent='Decisão pendente.';}
+   save();updateReadiness();
+  }
+ }
+ root.addEventListener('input',e=>{if(e.target.tagName!=='SELECT')field(e);});root.addEventListener('change',e=>{if(e.target.tagName==='SELECT')field(e);});
+ root.addEventListener('click',e=>{
+  if(!isActive())return;const el=e.target.closest('[data-external-action]');if(!el)return;const a=getAssessment(),flow=a.external,action=el.dataset.externalAction;ensureAccompanied(a);
+  try{
+   if(action==='pdf'){onPDF();return;}
+   if(action==='classify'||action==='unobserved'){const q=getQuestions().find(q=>q.id===el.dataset.question);confirmDiscoveryDecision(a,q,action==='classify'?'classified':'notObserved');save();root.querySelector(`#discovery-decision-${q.id}`).textContent='Decisão registrada.';updateReadiness();return;}
+   if(action==='start'){if(!a.identity.code.trim()||!a.identity.professional.trim()||!a.identity.agreement){notify('Preencha participante, avaliador e concordância para iniciar.');return;}flow.phase='discovery';}
+   if(action==='previous')flow.questionIndex=Math.max(0,flow.questionIndex-1);
+   if(action==='next'){const q=getQuestions()[flow.questionIndex];if(q.domain!==null&&!discoveryDecided(a,q.id)){root.querySelector(`[data-assisted-panel="${q.id}"]`).open=true;notify('O avaliador precisa confirmar a classificação ou registrar o motivo de ausência.');return;}if(flow.questionIndex===getQuestions().length-1)flow.phase='office-ready';else flow.questionIndex++;}
+   if(action==='office'){a.office ||=createOffice(a.id);if(a.office.status==='paused')applyOffice(a.office,'resume');flow.phase=a.office.status==='completed'?'review':'office';}
+   if(action==='review'){flow.phase='review';a.assisted.completedAt=null;}
+   if(action==='finish'){if(!accompaniedCompletion(a,getQuestions(),getDocs()).ready)throw Error('Conclua as decisões do avaliador antes de gerar o PDF final.');a.assisted.completedAt=new Date().toISOString();a.status='revisado';flow.phase='done';save();render();onPDF();return;}
+   save();render();scrollTo(0,0);
+  }catch(err){notify(err.message);}
+ });
 }

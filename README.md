@@ -56,7 +56,7 @@ Na seção **Simulações profissionais**, escolha **Iniciar / Retomar Escritór
 
 O Office tem cinco etapas: classificação, ordenação em lista única, urgências, mudança de regra e comunicação escrita. Cada etapa inicia um lote independente. Os cartões D01–D12 mantêm os dados originais de data/games.json, conferidos com references/materials.txt; o setor correto fica oculto na apresentação. O procedimento é identificado como adaptação digital e exige inferência na classificação.
 
-Use arrastar e soltar ou o seletor de destino; na ordenação, use arraste ou os botões subir/descer. Os destinos de arraste permanecem visíveis durante a rolagem. **Registrar primeira resposta** preserva a primeira entrega; revisões continuam possíveis até **Concluir etapa**. Entregas incompletas são aceitas após confirmação neutra. Nenhum acerto, erro ou nota é exibido.
+Use arrastar e soltar ou o seletor de destino; a barra mostra apenas RH/Financeiro/Operações e VERIFICAR na etapa 4. A origem é Documentos para organizar e não é uma pasta de destino; cartões distribuídos oferecem Devolver à lista inicial. na ordenação, use arraste ou os botões subir/descer. Os destinos de arraste permanecem visíveis durante a rolagem. **Registrar primeira resposta** preserva a primeira entrega; revisões continuam possíveis até **Concluir etapa**. Entregas incompletas são aceitas após confirmação neutra. Nenhum acerto, erro ou nota é exibido.
 
 **Pausar**, sair da atividade ou recarregar preserva o registro e bloqueia a sessão até a retomada. **Solicitar ajuda** registra o pedido e orienta chamar o avaliador. A comunicação final mostra exclusivamente a distribuição feita pelo participante na etapa 4. Uma atividade concluída é consultável e não pode ser reiniciada na mesma avaliação.
 
@@ -89,7 +89,7 @@ Verificação adicional: node tests/office-review-browser.mjs exercita component
 Link para o participante: https://domingodecafe.github.io/App-de-Habilidades/?teste=1
 Área do avaliador: https://domingodecafe.github.io/App-de-Habilidades/
 
-O modo externo oferece identificação, concordância, 28 perguntas Discovery e o Office, ocultando os controles de classificação. Usa armazenamento local separado do avaliador e restaura o percurso após recarga. Ao concluir o Office, inicia o download de um PDF e oferece um botão para baixar novamente. O envio por WhatsApp é manual.
+O modo externo agora exige aplicação acompanhada, com identificação do participante e do avaliador, concordância, 28 perguntas Discovery e o Office. O painel do avaliador é expansível e começa recolhido, ao lado da atividade no desktop e abaixo no tablet/celular. Usa armazenamento local separado do avaliador e restaura o percurso após recarga. Ao concluir o Office, abre a revisão do avaliador. O PDF final é liberado somente após as decisões de todas as perguntas de habilidade Discovery e oportunidades Office aplicadas. A conclusão inicia o download e oferece um botão para baixar novamente. O envio por WhatsApp é manual.
 
 O PDF contém identificação, radar com cinco eixos, respostas Discovery, primeiras/finais do Office, histórico de ações e revisão quando disponível. O radar distingue Discovery e Office; valores só aparecem após classificações válidas/confirmadas e cobertura mínima. Um preenchimento sem avaliador apresenta dados insuficientes. O arquivo também inclui um anexo JSON interno com a avaliação integral, preservando inclusive caracteres que não estejam disponíveis na fonte padrão do PDF.
 
@@ -98,3 +98,15 @@ Para receber o resultado, baixe o PDF enviado pela pessoa e use **Mais ações >
 PDF-lib é distribuído localmente em vendor/ com sua licença MIT. GitHub Pages publica main na raiz; .nojekyll mantém os módulos e recursos estáticos. Arquivos de testes gerados e avaliações não são versionados.
 
 Teste adicional: node tests/external-browser.mjs. Para verificar o site publicado, configure TEST_BASE_URL com a URL acima (sem a query).
+
+## Aplicação acompanhada - fluxo externo 2
+
+Na Discovery, cada resposta de habilidade exige **Confirmar classificação** ou **Registrar sem classificação** com motivo antes de avançar. Perguntas descritivas não recebem nota. Editar resposta ou campos do avaliador invalida a decisão anterior. Respostas anteriores e a primeira evidência permanecem preservadas. Uma ausência justificada mantém nota nula, sem impor zero.
+
+Durante o Office, o painel do avaliador registra apoio, acessibilidade, autonomia e observações por etapa. Esses dados ficam separados dos eventos da tarefa e são aproveitados na revisão final sem gerar notas nem substituir revisões existentes. Após o jogo, o painel de revisão Office fica recolhido; confirme as oportunidades aplicadas. A área de decisões Discovery permite consultar e corrigir pendências.
+
+**Concluir avaliação e baixar PDF** requer avaliador identificado, Office concluído e todas as decisões profissionais registradas. Recusa, interrupção ou barreira com justificativa permitem concluir sem atribuir nota. Isso não altera o mínimo de duas classificações para exibir um eixo no radar. O PDF contém avaliador responsável, estado da revisão, apoios e observações, respostas e radar, além do JSON integral interno. Falha de download mantém a avaliação concluída e permite nova tentativa.
+
+Metadados opcionais em assisted, versão 1: discoveryReviews (decisão, fingerprint dos campos revisados, horário), officeObservations (apoio/acesso/autonomia/notas por etapa), officePrepared e completedAt. external usa versão 2. O protocolo Office não muda: RECEBIDOS continua como origem interna e destino de devolução, preservando compatibilidade e omissões. Registros externos anteriores passam à revisão ao retomar; nenhuma nota, pergunta ou ação histórica é fabricada.
+
+Verificação: 39 testes de lógica e percurso do navegador em 1440, 768 e 390 px, incluindo teclado, decisões obrigatórias, devolução de cartões, revisão, PDF, recarga, importação e repetição após falha do gerador de PDF.

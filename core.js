@@ -1,3 +1,4 @@
+import {validateAccompanied} from './accompanied.js';
 import {validateOfficeReview} from './office-evaluation.js';
 import {validateOffice} from './office.js';
 import {blankIntegrated,validateIntegrated,migrateIntegrated} from './integrated.js';
@@ -33,6 +34,7 @@ export function validateImport(input,officeDocs){
   for(const v of Object.values(a.report))if(typeof v!=='string')throw new Error('Relatório inválido.');
   if(a.office!==undefined)validateOffice(a.office,a.id);
   if(a.officeReview!==undefined)validateOfficeReview(a.officeReview,a.office,officeDocs);
+  validateAccompanied(a);
   return a;
 }
 function isObject(value){return value!==null&&typeof value==='object'&&!Array.isArray(value);}

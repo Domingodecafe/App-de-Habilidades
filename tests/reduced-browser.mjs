@@ -6,7 +6,7 @@ const browser=await chromium.launch({headless:true,channel:'chrome'}),context=aw
 page.on('pageerror',e=>errors.push(e.message));await fs.mkdir('artifacts',{recursive:true});
 const click=async action=>{const target=page.locator(`[data-action="${action}"]`).first();if(!(await target.isVisible())&&["demo","export","import"].includes(action))await page.locator(".more-actions summary").click();await target.click();};
 try{
- await page.goto('http://127.0.0.1:4173/');assert.equal(await page.locator('nav button').count(),4);
+ await page.goto('http://127.0.0.1:4173/');await page.locator('nav button').first().waitFor();assert.equal(await page.locator('nav button').count(),4);
  await click('start-interview');await page.locator('[data-field="report.interests"]').fill('Interesse fictício');await click('dr-continue');
  assert.equal(await page.locator('#dr-jump option').count(),28);assert.equal(await page.locator('[data-key="score"]').count(),0);
  await page.locator('[data-key="answer"]').fill('Preferência fictícia');
