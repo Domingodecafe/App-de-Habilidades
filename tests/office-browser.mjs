@@ -1,15 +1,14 @@
-import {createRequire} from 'node:module';
+import {launchBrowser,base} from './browser-config.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-const require=createRequire(import.meta.url),{chromium}=require(process.env.PLAYWRIGHT_MODULE||'C:/Users/Rickn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
-const browser=await chromium.launch({headless:true,channel:'chrome'});
+const browser=await launchBrowser();
 const storage='lado-a-evaluations-v1';
 try{
  for(const width of [1440,768]){
   const context=await browser.newContext({viewport:{width,height:1000},acceptDownloads:true}),page=await context.newPage(),errors=[];
   page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());
-  await page.goto('http://127.0.0.1:4173/');
-  assert.equal((await page.request.get('http://127.0.0.1:4173/office.js')).status(),200,'Server serves current workspace');
+  await page.goto(base);
+  assert.equal((await page.request.get(new URL('office.js',base).href)).status(),200,'Server serves current workspace');
   await page.locator('nav [data-value="3"]').click();await page.locator('[data-action="office-demo"]').click();
   const read=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key))[0],storage);
   assert.equal(await page.locator('.office-shell').count(),1);assert.equal(await page.locator('.sidebar').count(),0);

@@ -1,0 +1,234 @@
+{
+  "date": "2026-10-15T15:54:29.492Z",
+  "browser": "156.0.8078.4",
+  "platform": "win32 x64",
+  "cpu": "AMD Ryzen 5 5500U with Radeon Graphics         ",
+  "repetitions": 20,
+  "notes": "Contexto Chromium novo; chave isolada. Validação usa o JSON em memória mesmo quando há falha de quota. Escrita mede apenas chamadas bem-sucedidas. Leitura não executada quando a quota impede gravar.",
+  "measurements": [
+    {
+      "cpu": 1,
+      "count": 10,
+      "bytes": 488051,
+      "characters": 485491,
+      "eventsPerAssessment": 108,
+      "quotaFailures": 0,
+      "times": {
+        "serialize": {
+          "samples": 20,
+          "medianMs": 0.85,
+          "p95Ms": 1.1
+        },
+        "write": {
+          "samples": 20,
+          "medianMs": 0.85,
+          "p95Ms": 1.4
+        },
+        "read": {
+          "samples": 20,
+          "medianMs": 0.1,
+          "p95Ms": 0.2
+        },
+        "initialValidation": {
+          "samples": 20,
+          "medianMs": 18.8,
+          "p95Ms": 20.7
+        }
+      }
+    },
+    {
+      "cpu": 1,
+      "count": 50,
+      "bytes": 2440251,
+      "characters": 2427451,
+      "eventsPerAssessment": 108,
+      "quotaFailures": 0,
+      "times": {
+        "serialize": {
+          "samples": 20,
+          "medianMs": 4.65,
+          "p95Ms": 6.5
+        },
+        "write": {
+          "samples": 20,
+          "medianMs": 8.2,
+          "p95Ms": 10
+        },
+        "read": {
+          "samples": 20,
+          "medianMs": 0.8,
+          "p95Ms": 0.9
+        },
+        "initialValidation": {
+          "samples": 20,
+          "medianMs": 89.05,
+          "p95Ms": 104
+        }
+      }
+    },
+    {
+      "cpu": 1,
+      "count": 100,
+      "bytes": 4880501,
+      "characters": 4854901,
+      "eventsPerAssessment": 108,
+      "quotaFailures": 0,
+      "times": {
+        "serialize": {
+          "samples": 20,
+          "medianMs": 11.7,
+          "p95Ms": 13.4
+        },
+        "write": {
+          "samples": 20,
+          "medianMs": 17.8,
+          "p95Ms": 19.8
+        },
+        "read": {
+          "samples": 20,
+          "medianMs": 1.8,
+          "p95Ms": 1.9
+        },
+        "initialValidation": {
+          "samples": 20,
+          "medianMs": 178.9,
+          "p95Ms": 191.9
+        }
+      }
+    },
+    {
+      "cpu": 1,
+      "count": 500,
+      "bytes": 24402501,
+      "characters": 24274501,
+      "eventsPerAssessment": 108,
+      "quotaFailures": 20,
+      "times": {
+        "serialize": {
+          "samples": 20,
+          "medianMs": 46.8,
+          "p95Ms": 48
+        },
+        "write": null,
+        "read": null,
+        "initialValidation": {
+          "samples": 20,
+          "medianMs": 888.7,
+          "p95Ms": 914.7
+        }
+      }
+    },
+    {
+      "cpu": 4,
+      "count": 10,
+      "bytes": 488051,
+      "characters": 485491,
+      "eventsPerAssessment": 108,
+      "quotaFailures": 0,
+      "times": {
+        "serialize": {
+          "samples": 20,
+          "medianMs": 4.4,
+          "p95Ms": 5.6
+        },
+        "write": {
+          "samples": 20,
+          "medianMs": 3.65,
+          "p95Ms": 5.3
+        },
+        "read": {
+          "samples": 20,
+          "medianMs": 0.5,
+          "p95Ms": 0.7
+        },
+        "initialValidation": {
+          "samples": 20,
+          "medianMs": 113.05,
+          "p95Ms": 122.3
+        }
+      }
+    },
+    {
+      "cpu": 4,
+      "count": 50,
+      "bytes": 2440251,
+      "characters": 2427451,
+      "eventsPerAssessment": 108,
+      "quotaFailures": 0,
+      "times": {
+        "serialize": {
+          "samples": 20,
+          "medianMs": 24.35,
+          "p95Ms": 28.7
+        },
+        "write": {
+          "samples": 20,
+          "medianMs": 36.5,
+          "p95Ms": 38.5
+        },
+        "read": {
+          "samples": 20,
+          "medianMs": 3,
+          "p95Ms": 5.1
+        },
+        "initialValidation": {
+          "samples": 20,
+          "medianMs": 575.35,
+          "p95Ms": 602
+        }
+      }
+    },
+    {
+      "cpu": 4,
+      "count": 100,
+      "bytes": 4880501,
+      "characters": 4854901,
+      "eventsPerAssessment": 108,
+      "quotaFailures": 0,
+      "times": {
+        "serialize": {
+          "samples": 20,
+          "medianMs": 54.2,
+          "p95Ms": 63.1
+        },
+        "write": {
+          "samples": 20,
+          "medianMs": 69.3,
+          "p95Ms": 82.5
+        },
+        "read": {
+          "samples": 20,
+          "medianMs": 7.2,
+          "p95Ms": 10.4
+        },
+        "initialValidation": {
+          "samples": 20,
+          "medianMs": 1103.2,
+          "p95Ms": 1294.8
+        }
+      }
+    },
+    {
+      "cpu": 4,
+      "count": 500,
+      "bytes": 24402501,
+      "characters": 24274501,
+      "eventsPerAssessment": 108,
+      "quotaFailures": 20,
+      "times": {
+        "serialize": {
+          "samples": 20,
+          "medianMs": 256.6,
+          "p95Ms": 279.2
+        },
+        "write": null,
+        "read": null,
+        "initialValidation": {
+          "samples": 20,
+          "medianMs": 5549.35,
+          "p95Ms": 5959
+        }
+      }
+    }
+  ]
+}

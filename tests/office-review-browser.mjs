@@ -1,11 +1,10 @@
-import {createRequire} from 'node:module';
+import {launchBrowser,base} from './browser-config.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createAssessment} from '../core.js';
 import {createOffice,applyOffice,officeStage} from '../office.js';
 const docs=JSON.parse(fs.readFileSync(new URL('../data/games.json',import.meta.url))).docs;
-const require=createRequire(import.meta.url),{chromium}=require(process.env.PLAYWRIGHT_MODULE||'C:/Users/Rickn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
-const browser=await chromium.launch({headless:true,channel:'chrome'}),key='lado-a-evaluations-v1';
+const browser=await launchBrowser(),key='lado-a-evaluations-v1';
 function fixture(){
  const a=createAssessment(),s=a.office=createOffice(a.id,{demo:true});a.identity.code='MATRIX-DEMO · fictício';
  while(s.status==='active'){
@@ -22,7 +21,7 @@ function fixture(){
 try{
  for(const width of [1440,768]){
   const context=await browser.newContext({viewport:{width,height:1000},acceptDownloads:true}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
-  const a=fixture();await page.goto('http://127.0.0.1:4173/');await page.evaluate(({key,a})=>localStorage.setItem(key,JSON.stringify([a])),{key,a});await page.reload();
+  const a=fixture();await page.goto(base);await page.evaluate(({key,a})=>localStorage.setItem(key,JSON.stringify([a])),{key,a});await page.reload();
   await page.locator('nav [data-value="3"]').click();await page.locator('[data-action="office-start"]').click();assert.equal(await page.locator('[data-office-review-action]').count(),0,'No review controls in participant Office');await page.locator('.office-completed [data-office="exit"]').click();
   await page.locator('[data-action="office-review"]').click();assert.match(await page.locator('h2').first().innerText(),/Revisão/);
   const review=id=>page.locator(`#review-${id}`),field=(id,k)=>review(id).locator(`[data-office-review-key="${k}"]`),use=id=>review(id).locator('[data-office-review-action="suggest"]').click(),confirm=id=>review(id).locator('[data-office-review-action="confirm"]').click();

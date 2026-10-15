@@ -1,11 +1,7 @@
-import {createRequire} from 'node:module';
+import {launchBrowser,base} from './browser-config.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-const require=createRequire(import.meta.url);
-const runtime='C:/Users/Rickn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules';
-const {chromium}=require(process.env.PLAYWRIGHT_MODULE||`${runtime}/playwright`);
-const browser=await chromium.launch({headless:true,channel:'chrome'});
-const base=process.env.TEST_BASE_URL||'http://127.0.0.1:4173/';
+const browser=await launchBrowser();
 try{
  const context=await browser.newContext({acceptDownloads:true}),page=await context.newPage(),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
@@ -18,7 +14,7 @@ try{
  assert.equal(backup.identity.code,'BACKUP fictício');assert.equal(backup.assisted.version,1);
  assert.deepEqual(errors,[]);await context.close();
 
- const clean=await browser.newContext(),p=await clean.newPage();await p.goto(base);
+ const clean=await browser.newContext(),p=await clean.newPage();await p.goto(base);assert.equal(await p.evaluate(()=>performance.getEntriesByType('resource').some(r=>r.name.endsWith('/legacy-history.js'))),false);
  const result=await p.evaluate(async()=>{
   const {createAssessment}=await import('./core.js');const {createAssessmentPDF,readAssessmentPDF}=await import('./assessment-pdf.js');
   const {ensureAccompanied,confirmDiscoveryDecision}=await import('./accompanied.js');const {blankRecord,discoveryQuestions}=await import('./integrated.js');

@@ -110,3 +110,37 @@ Durante o Office, o painel do avaliador registra apoio, acessibilidade, autonomi
 Metadados opcionais em assisted, versão 1: discoveryReviews (decisão, fingerprint dos campos revisados, horário), officeObservations (apoio/acesso/autonomia/notas por etapa), officePrepared e completedAt. external usa versão 2. O protocolo Office não muda: RECEBIDOS continua como origem interna e destino de devolução, preservando compatibilidade e omissões. Registros externos anteriores passam à revisão ao retomar; nenhuma nota, pergunta ou ação histórica é fabricada.
 
 Verificação: 39 testes de lógica e percurso do navegador em 1440, 768 e 390 px, incluindo teclado, decisões obrigatórias, devolução de cartões, revisão, PDF, recarga, importação e repetição após falha do gerador de PDF.
+
+
+## Manutenção e publicação — atualização de 15/10/2026
+
+Requisitos de desenvolvimento: Node 24 e npm. A aplicação publicada continua estática, sem instalar bibliotecas no dispositivo do participante.
+
+```sh
+npm ci
+npx playwright install --with-deps chromium
+npm test
+npm run test:browser
+# Ou executar ambas as verificações:
+npm run test:all
+```
+
+Os testes usam o Chromium instalado pelo Playwright, sem depender de Chrome ou caminhos pessoais. O comando `test:browser` inicia um servidor em porta livre, aguarda sua disponibilidade e executa as seis suítes em sequência. Capturas, traces e logs ficam em `artifacts/`. Para verificar o site publicado, use a variável `TEST_BASE_URL` com sua URL terminada em `/`. `tests/browser.mjs` continua como encaminhamento de compatibilidade e não é executado uma segunda vez pelo runner.
+
+O workflow **Testar e publicar LADO A** executa os testes em pushes e pull requests. Somente `main` publica, depois da aprovação do job de testes; pull requests não publicam. `npm run build:pages` cria `.site/` com HTML, módulos, CSS e recursos necessários. Testes, benchmarks, node_modules e arquivos locais de avaliações não entram no pacote. Pages usa GitHub Actions como origem da publicação; o endereço público permanece o mesmo. Em falhas, o workflow guarda os diagnósticos por sete dias. A configuração segue os [workflows oficiais do Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) e a [instalação de navegadores Playwright para CI](https://playwright.dev/docs/ci-intro).
+
+Ao final do teste, **Voltar ao início da avaliação** abre o cadastro na raiz, sem `?teste=1`. Os registros externos permanecem na chave separada; ao retornar ao link externo, a avaliação concluída e o download continuam disponíveis. Esse botão não reinicia o jogo.
+
+As telas e ações de aplicação dos protocolos históricos foram retiradas do bootstrap atual. A consulta anterior é somente leitura e usa `legacy-history.js`, carregado sob demanda. Critérios de validação, migrações e funções históricas públicas de cálculo continuam disponíveis e cobertos por testes; respostas antigas não são convertidas em notas novas.
+
+O PDF direto apresenta entregas, respostas abertas, histórico e revisão em tabelas, com cabeçalhos repetidos e continuação de textos extensos. O radar permanece separado por modalidade e o anexo `avaliacao-lado-a.json` preserva os registros integrais para importação. Os testes geram exemplos em `output/pdf/`, sem versionar avaliações.
+
+### Benchmark manual do armazenamento
+
+```sh
+npm run benchmark:storage
+```
+
+O benchmark inicia seu próprio servidor e um contexto novo de Chromium. Usa somente avaliações fictícias, uma chave isolada e vinte repetições por cenário: 10, 50, 100 e 500 avaliações, em CPU normal e desacelerada quatro vezes. Não acessa os registros do navegador de aplicação. Gera `docs/storage-benchmark.json`; resultados e recomendação ficam em `docs/storage-benchmark.md`. Os tempos não são um critério de bloqueio do CI. IndexedDB não foi introduzido nesta atualização.
+
+Verificação desta atualização: 45 testes de lógica, seis suítes de navegador, comparação de PDF com o mesmo conjunto fictício (21 páginas antes, 20 em tabelas) e inspeção visual de tabelas e continuação de respostas extensas. O tamanho em bytes pode crescer devido ao desenho das tabelas; a redução de páginas varia conforme os registros.

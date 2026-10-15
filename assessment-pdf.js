@@ -1,5 +1,7 @@
 import {discoveryQuestions,integratedResults,DISCOVERY_DOMAINS} from './integrated.js';
 import {officeResults,getOfficeEvaluation} from './office-evaluation.js';
+import {stageQuestions,MODALITIES} from './office-protocol.js';
+import {snapshotDecision,eventRow,conditionName,autonomyName} from './office-pdf-data.js';
 let loading;
 async function library(){
   if(globalThis.PDFLib)return globalThis.PDFLib;
@@ -15,14 +17,48 @@ export async function createAssessmentPDF(assessment,content,docs){
   const green=rgb(0,.28,.26),ink=rgb(.12,.2,.18),gray=rgb(.4,.46,.43);let page,y;
   function addPage(){page=pdf.addPage([595.28,841.89]);y=755;page.drawRectangle({x:0,y:793,width:595.28,height:49,color:green});page.drawText('LADO A | Employability',{x:42,y:811,size:16,font:bold,color:rgb(1,1,1)});}
   function space(height){if(!page||y-height<48)addPage();}
+  function wrapText(value,width,f,size){
+    const output=[],widths=new Map();const measure=char=>{if(!widths.has(char))widths.set(char,f.widthOfTextAtSize(char,size));return widths.get(char);};
+    for(const paragraph of printable(value,f).replace(/\t/g,'    ').split(/\r\n|\r|\n/)){
+      let text='',length=0;
+      for(const char of paragraph){
+        const w=measure(char);if(length+w>width){const cut=text.lastIndexOf(' ');if(cut>0){output.push(text.slice(0,cut));text=text.slice(cut+1);}else{output.push(text);text='';}length=[...text].reduce((sum,c)=>sum+measure(c),0);}
+        text+=char;length+=w;
+      }output.push(text);
+    }return output;
+  }
   function line(text,{size=10,heading=false,color=ink}={}){
-    const f=heading?bold:font,clean=printable(text,f);let current='',width=0;
-    for(const paragraph of clean.split(/\r?\n/)){
-      current='';width=0;for(const char of paragraph){const charWidth=f.widthOfTextAtSize(char,size);if(width+charWidth>510){space(size+6);page.drawText(current,{x:42,y,size,font:f,color});y-=size+6;current='';width=0;}current+=char;width+=charWidth;}
-      space(size+6);if(current)page.drawText(current,{x:42,y,size,font:f,color});y-=size+6;
-    }
+    const f=heading?bold:font;
+    for(const current of wrapText(text,510,f,size)){space(size+6);if(current)page.drawText(current,{x:42,y,size,font:f,color});y-=size+6;}
   }
   function title(text){space(45);y-=14;line(text,{heading:true,size:15,color:green});y-=7;}
+  function table(headers,widths,rows){
+    const size=8.5,leading=11,padding=6;
+    function wrap(value,width,f=font){
+      return wrapText(value,width-padding*2,f,size);
+    }
+    function cells(lines,start,count,header=false,stripe=false){
+      const height=count*leading+padding*2;let x=42;
+      for(let i=0;i<widths.length;i++){
+        page.drawRectangle({x,y:y-height,width:widths[i],height,color:header?green:stripe?rgb(.96,.98,.96):rgb(1,1,1),borderColor:rgb(.82,.87,.83),borderWidth:.5});
+        const segment=i===0&&start>=lines[i].length?[lines[i][0]]:lines[i].slice(start,start+count);
+        segment.forEach((text,j)=>{if(text)page.drawText(text,{x:x+padding,y:y-padding-size-j*leading,size,font:header?bold:font,color:header?rgb(1,1,1):ink});});x+=widths[i];
+      }y-=height;
+    }
+    const heading=headers.map((h,i)=>wrap(h,widths[i],bold)),headingLines=Math.max(...heading.map(l=>l.length)),headerHeight=headingLines*leading+padding*2;
+    const fresh=()=>{addPage();cells(heading,0,headingLines,true);};
+    space(headerHeight+leading+padding*2);cells(heading,0,headingLines,true);
+    rows.forEach((row,index)=>{
+      const lines=row.map((value,i)=>wrap(value,widths[i])),count=Math.max(...lines.map(l=>l.length));let offset=0;
+      const whole=count*leading+padding*2;
+      if(whole<=755-48-headerHeight&&whole>y-48)fresh();
+      while(offset<count){
+        let capacity=Math.floor((y-48-padding*2)/leading);if(capacity<1){fresh();capacity=Math.floor((y-48-padding*2)/leading);}
+        const take=Math.min(capacity,count-offset);cells(lines,offset,take,false,index%2===1);offset+=take;
+        if(offset<count)fresh();
+      }
+    });y-=12;
+  }
   function radar(){
     addPage();title('Radar - habilidades avaliadas');
     line('Linhas independentes: Discovery (índigo) e Office (verde).');
@@ -48,14 +84,28 @@ export async function createAssessmentPDF(assessment,content,docs){
   for(const q of discoveryQuestions(content)){const record=assessment.integrated.records[q.id];title(`${q.id} - ${q.text}`);line(record?.answer||'Sem resposta registrada.');if(record?.reason)line('Motivo de não classificação: '+record.reason);if(record?.help)line('Ajuda: '+record.help);if(record?.access)line('Acessibilidade: '+record.access);if(record?.notes)line('Observações: '+record.notes);if(record?.score!==null&&record?.score!==undefined)line(`Classificação: ${record.score}/2`);}
   if(assessment.office){
     title('Escritório Digital - registros preservados');line(`Protocolo Office ${assessment.office.version}. ${assessment.office.adaptation}`);
-    for(const stage of assessment.office.stages){title(`Etapa ${stage.step}`);const observation=assessment.assisted?.officeObservations[stage.step];if(observation){line('Apoios e observações do avaliador:',{heading:true});line(JSON.stringify(observation,null,2),{size:9});}line(`Início: ${stage.startedAt} | Conclusão: ${stage.completedAt||'não concluída'}`);
-      for(const [label,snapshot] of [['Primeira entrega',stage.first],['Entrega final',stage.final]]){line(label,{heading:true});line(snapshot?JSON.stringify(snapshot.response,null,2):'Não registrada.',{size:9});}
+    for(const stage of assessment.office.stages){
+      title(`Etapa ${stage.step}`);line(`Início: ${stage.startedAt} | Conclusão: ${stage.completedAt||'não concluída'}`);
+      const observation=assessment.assisted?.officeObservations[stage.step];
+      if(observation)table(['Acompanhamento','Registro'],[120,390],[['Autonomia',autonomyName(observation.autonomy)],['Apoio recebido',observation.support||'Não registrado'],['Acessibilidade',observation.access||'Não registrada'],['Observações',observation.notes||'Não registradas']]);
+      if(stage.step!==5)table(['Documento / prazo','Primeira entrega','Entrega final'],[230,140,140],docs.map(d=>[`${d.id} · ${d.name}\nPrazo: ${d.date}`,snapshotDecision(stage.step,stage.first,d.id),snapshotDecision(stage.step,stage.final,d.id)]));
+      for(const [id,q] of stageQuestions(stage.step)){
+        if(assessment.office.version!==2)continue;
+        line(q.text,{heading:true});
+        table(['Entrega','Resposta / modalidade'],[100,410],[['Primeira',stage.first?`${stage.first.response.answers[id].text||'(em branco)'}\n${MODALITIES[stage.first.response.answers[id].mode]}`:'Não registrada'],['Final',stage.final?`${stage.final.response.answers[id].text||'(em branco)'}\n${MODALITIES[stage.final.response.answers[id].mode]}`:'Não registrada']]);
+      }
+      if(stage.step===5)table(['Mensagem','Resposta'],[100,410],[['Primeira entrega',stage.first?stage.first.response.text||'(em branco)':'Não registrada'],['Entrega final',stage.final?stage.final.response.text||'(em branco)':'Não registrada']]);
     }
-    title('Ajuda, pausas e histórico das ações');
-    for(const e of assessment.office.events)line(JSON.stringify(e),{size:8});
+    title('Ajuda, pausas e histórico das ações');line('Horários em UTC (ISO). A sequência preserva a ordem de todas as ações.',{size:9});
+    table(['Seq.','Horário UTC','Etapa / doc.','Ação / alteração'],[35,110,65,300],assessment.office.events.map(eventRow));
     title('Revisão do avaliador');
-    for(const item of getOfficeEvaluation(assessment,docs)){line(item.op.name,{heading:true});line(!item.available?'Não aplicada':item.record.confirmedAt?JSON.stringify(item.record,null,2):'Revisão pendente.',{size:9});}
+    for(const item of getOfficeEvaluation(assessment,docs)){
+      title(item.op.name);if(!item.available){line('Não aplicada');continue;}
+      const r=item.record;
+      table(['Critério / condição','Registro'],[130,380],[['Condição',conditionName(r.condition)],['Nota sugerida',item.suggestion===null?'Aguardando componentes':String(item.suggestion)+'/2'],['Nota confirmada',r.confirmedAt&&r.condition==='observed'?`${r.score}/2`:'Sem nota confirmada'],['Confirmação',r.confirmedAt||'Pendente'],['Motivo',r.reason||'Não registrado'],['Autonomia',autonomyName(r.autonomy)],['Apoio recebido',r.support||'Não registrado'],['Acessibilidade',r.access||'Não registrada'],...(item.op.components?item.op.components.map((text,i)=>[text,r.components[i]===null?'Não classificado':r.components[i]?'Demonstrado':'Não demonstrado']):[]),...(r.transcription?[['Transcrição',r.transcription],['Modalidade',MODALITIES[r.modality]]]:[])]);
+    }
   }
+
   const data=new TextEncoder().encode(JSON.stringify(assessment,null,2));
   await pdf.attach(data,'avaliacao-lado-a.json',{mimeType:'application/json',description:'Cópia integral da avaliação para importar no LADO A'});
   const pages=pdf.getPages();pages.forEach((p,i)=>p.drawText(`LADO A - ${i+1}/${pages.length}`,{x:42,y:25,size:8,font,color:gray}));

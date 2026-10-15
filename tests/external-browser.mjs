@@ -1,12 +1,12 @@
-import {createRequire} from 'node:module';
+import * as PDFLib from 'pdf-lib';
+globalThis.PDFLib=PDFLib;
+import {launchBrowser,base} from './browser-config.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {discoveryQuestions} from '../integrated.js';
 import {readAssessmentPDF} from '../assessment-pdf.js';
-const require=createRequire(import.meta.url),runtime='C:/Users/Rickn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules';
-const {chromium}=require(process.env.PLAYWRIGHT_MODULE||`${runtime}/playwright`);globalThis.PDFLib=require(`${runtime}/pdf-lib`);
 const content=JSON.parse(await fs.readFile(new URL('../data/content.json',import.meta.url),'utf8')),qs=discoveryQuestions(content);
-const browser=await chromium.launch({headless:true,channel:'chrome'}),base=process.env.TEST_BASE_URL||'http://127.0.0.1:4173/';
+const browser=await launchBrowser();
 try{
  for(const width of [1440,768,390]){
   const context=await browser.newContext({viewport:{width,height:1000},acceptDownloads:true}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());
@@ -33,7 +33,7 @@ try{
     await fs.mkdir('output/pdf',{recursive:true});await fs.writeFile(`output/pdf/teste-externo-${width}.pdf`,bytes);
     const key='lado-a-teste-externo-v1';const saved=await page.evaluate(key=>JSON.parse(localStorage.getItem(key))[0],key);assert.deepEqual(restored,saved);
     await page.screenshot({path:`artifacts/external-finished-${width}.png`,fullPage:true});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-    await page.reload();const second=page.waitForEvent('download');await page.locator('[data-external-action="pdf"]').click();await second;
+    await page.reload();const second=page.waitForEvent('download');await page.locator('[data-external-action="pdf"]').click();await second;await page.locator('[data-external-action="home"]').click();await page.locator('[data-action="start-interview"]').waitFor();assert.equal(new URL(page.url()).search,'');assert.deepEqual(await page.evaluate(key=>JSON.parse(localStorage.getItem(key))[0].office,key),saved.office);await page.goto(`${base}?teste=1`);await page.locator('[data-external-action="pdf"]').waitFor();
     // Receiving evaluator imports the actual downloaded PDF, preserving the whole record.
     const assessor=await context.newPage();await assessor.goto(base);await assessor.locator('.more-actions summary').click();await assessor.locator('[data-action="import"]').click();await assessor.locator('#import-file').setInputFiles({name:'recebido.pdf',mimeType:'application/pdf',buffer:bytes});
     await assessor.waitForFunction(()=>document.querySelector('#toast').textContent.includes('importada'));await assessor.locator('nav [data-value="3"]').click();await assessor.locator('[data-action="office-review"]').click();assert.equal(await assessor.locator('.office-review-op').count(),8);await assessor.close();

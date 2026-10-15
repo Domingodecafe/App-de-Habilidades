@@ -1,11 +1,10 @@
-import {createRequire} from 'node:module';
+import {launchBrowser,base} from './browser-config.mjs';
 import assert from 'node:assert/strict';
-const require=createRequire(import.meta.url),{chromium}=require('C:/Users/Rickn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
-const browser=await chromium.launch({headless:true,channel:'chrome'});
+const browser=await launchBrowser();
 try{
  for(const width of [1440,768]){
   const context=await browser.newContext({viewport:{width,height:1000}}),page=await context.newPage();
-  await page.goto('http://127.0.0.1:4173/');
+  await page.goto(base);
   await page.locator('[data-action="start-interview"]').click();
   await page.locator('[data-action="dr-continue"]').click();
   const value=await page.locator('#dr-jump option').evaluateAll(els=>els.find(e=>e.textContent.includes('D09 ·')).value);
