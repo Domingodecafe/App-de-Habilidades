@@ -12,9 +12,9 @@ export function snapshotDecision(stage,snapshot,id){
 export function eventRow(e){
  const action={'stage-start':'Início da etapa',move:'Movimentação',reorder:'Reordenação',urgent:'Marcação de urgência',text:'Edição da mensagem',answer:'Resposta à pergunta','release-instruction':'Início da tarefa',first:'Primeira entrega',complete:'Conclusão da etapa','activity-complete':'Conclusão do Office',help:'Solicitação de ajuda',pause:'Pausa',resume:'Retomada'}[e.action]||e.action;
  let details='';
- if(e.action==='move')details=`${folderName(e.origin)} (posição ${e.fromPosition+1}) → ${folderName(e.destination)} (posição ${e.toPosition+1})`;
- else if(e.action==='reorder')details=`Posição ${e.fromPosition+1} → ${e.toPosition+1}\nAntes: ${e.before.join(', ')}\nDepois: ${e.after.join(', ')}`;
- else if(e.action==='urgent')details=`${e.before?'Marcado':'Desmarcado'} → ${e.after?'Marcado':'Desmarcado'}`;
+ if(e.action==='move')details=`${folderName(e.origin)} (posição ${e.fromPosition+1}) para ${folderName(e.destination)} (posição ${e.toPosition+1})`;
+ else if(e.action==='reorder')details=`Posição ${e.fromPosition+1} para ${e.toPosition+1}\nAntes: ${e.before.join(', ')}\nDepois: ${e.after.join(', ')}`;
+ else if(e.action==='urgent')details=`${e.before?'Marcado':'Desmarcado'} para ${e.after?'Marcado':'Desmarcado'}`;
  else if(e.action==='text')details=`Antes: ${e.before||'(em branco)'}\nDepois: ${e.after||'(em branco)'}`;
  else if(e.action==='answer')details=`${QUESTIONS[e.question]?.text||e.question}\nAntes (${MODALITIES[e.before.mode]}): ${e.before.text||'(em branco)'}\nDepois (${MODALITIES[e.after.mode]}): ${e.after.text||'(em branco)'}`;
  else if(e.action==='stage-start')details=`Ordem inicial: ${e.after.order.join(', ')||'Mensagem escrita'}. ${Object.keys(e.after.placements).length?'Todos na lista inicial.':''}`;
